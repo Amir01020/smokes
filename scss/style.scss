@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+@mixin flex($a, $b, $c) {
+    display: $a;
+    justify-content: $b;
+    align-items: $c;
+}
+
+body {
+    background-color: #1E1E1E;
+    font-family: 'Mulish';
+}
+
+.cont {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+main {
+    .head {
+        background-image: url(../icon/image\ 5.png);
+        background-position: center;
+        background-size: cover;
+        height: 670px;
+
+        .cont {
+            height: 100%;
+        }
+
+        .headBox {
+            @include flex(flex, center, start);
+            align-items: stretch;
+            gap: 20px;
+            padding: 0 20px;
+            height: fit-content;
+
+            height: 100%;
+
+            .elem {
+                height: 100%;
+                position: relative;
+
+                height: 100%;
+
+
+                &:nth-child(1) {
+                    width: 40%;
+                    height: 100%;
+
+                    .block {
+                        height: 100%;
+
+                        &:nth-child(2) {
+                            height: fit-content;
+                            position: absolute;
+                            margin-top: 210px;
+                            bottom: 23px;
+                            left: 0px;
+                            width: 100%;
+
+                            button {
+                                width: 100%;
+                                height: 35px;
+                                border-radius: 5px;
+                                border: 1px solid #fff;
+                                color: #fff;
+                                background: transparent;
+                                cursor: pointer;
+
+                                &:nth-child(1) {
+                                    height: 56px;
+                                    background: #74E2C7;
+                                    margin-bottom: 27px;
+                                    color: #000;
+                                    font-weight: 700;
+                                    font-size: 24px;
+                                    line-height: 30px;
+                                    border: 0;
+
+                                    &:hover {
+                                        background-color: #C8FFF1;
+                                    }
+
+                                    &:active {
+                                        background-color: #468C7B;
+                                    }
+
+                                }
+                            }
+                        }
+
+                        padding-top: 20px;
+
+                        h1 {
+                            font-weight: 700;
+                            font-size: 80px;
+                            line-height: 80%;
+                            color: #fff;
+                            transition: all 1.5s;
+
+                            span {
+                                color: #74E2C7;
+                            }
+
+                            margin-bottom: 27px;
+                        }
+
+                        p {
+                            font-weight: 300;
+                            font-size: 30px;
+                            line-height: 110%;
+                            color: #FFFFFF;
+                            opacity: 0.6;
+                            transition: all 1.5s;
+                            // transition-delay: 1s;
+                        }
+                    }
+
+                }
+
+                &:nth-child(2) {
+                    width: 60%;
+                    height: fit-content;
+                    text-align: center;
+
+                    nav {
+                        text-align: right;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+
+                        li {
+                            margin-bottom: 14px;
+                            list-style-type: none;
+
+                            a {
+                                font-weight: 200;
+                                font-size: 16px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                opacity: 0.6;
+                                text-decoration: none;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+
+                            }
+
+                            &:nth-child(1) {
+                                margin-bottom: 24px;
+
+                                a {
+                                    opacity: 1;
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .content {
+        height: 100vh;
+        .box {
+            margin-top: 77px;
+            padding: 0 20px;
+            @include flex(flex, space-between, center);
+            gap: 50px;
+
+            .block {
+                &:nth-child(1) {
+                    width: 35%;
+
+                    .text {
+                        padding-right: 20px;
+                        border-right: 3px solid #74E2C7;
+
+                        p {
+                            font-weight: 300;
+                            font-size: 24px;
+                            line-height: 130%;
+                            color: #FFFFFF;
+                            margin-bottom: 26px;
+                        }
+                    }
+
+                    .masseg {
+                        @include flex(flex, start, start);
+                        gap: 28px;
+                    }
+
+                }
+
+                &:nth-child(2) {
+                    width: 65%;
+
+                    .mySwiper {
+                        width: 100%;
+                        height: 100%;
+
+                        .swiperCont {
+                            width: 100%;
+                            height: 100%;
+
+                            .slid {
+                                width: 100%;
+                                background-color: #1E1E1E;
+                                padding: 0 0 20px ;
+                                .gridBloc {
+                                    display: grid;
+                                    grid-template-columns: 1.5fr 1.5fr 1fr;
+                                    grid-template-rows: 237px 194px;
+
+                                    
+                                    padding: 10px;
+                                    gap: 20px;
+
+                                    .gridElem {
+                                        box-shadow: 0px 20px 47px -14px #000000;
+                                        border-radius: 100px 100px 10px 10px;
+                                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.65%, rgba(0, 0, 0, 0.68) 72.92%, #000000 100%), url(.jpg);
+                                        background-position: center;
+                                        position: relative;
+                                        background-size: cover;
+                                        .text{
+                                            position: absolute;
+                                            left: 20px;
+                                            bottom: 20px;
+                                            max-width: 70%;
+                                            color: #fff;
+                                        }
+                                        .icon{
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                        }
+                                        &:nth-child(1) {
+                                            grid-column: 1/2;
+                                            grid-row: 1/3;
+                                            background-image: url(../icon/Rectangle\ 5.png);
+                                        }
+                                        &:nth-child(2){
+                                            background-image: url(../icon/Rectangle\ 7.png);
+                                        }
+
+                                        &:nth-child(3) {
+                                            grid-column: 3/4;
+                                            grid-row: 1/3;
+                                            background-image: url(../icon/Rectangle\ 8.png);
+                                        }
+                                        &:nth-child(4){
+                                            background-image: url(../icon/Rectangle\ 6.png);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
