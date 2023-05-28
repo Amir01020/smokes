@@ -162,9 +162,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
+               <div class="a">
                 <div class="swiper-button-prev"></div>
+
+                <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
+               </div>
               </div>
             </div>
           </div>
@@ -414,11 +417,7 @@
         },
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
-          renderBullet: function (index, className) {
-            return `<img class="${className}" src="./icon/pagination.svg"" alt="">`;
-            //   return '<span src="" class=" a   ' + className + '">' + (menu[index]) + '</span>';
-          },
+
         },
 
         // Navigation arrows

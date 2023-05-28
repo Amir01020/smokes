@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   font-family: "Mulish";
 }
 body::-webkit-scrollbar {
@@ -71,7 +71,7 @@ main .head .headBox .elem:nth-child(1) .block:nth-child(2) button {
 }
 main .head .headBox .elem:nth-child(1) .block:nth-child(2) button:nth-child(1) {
   height: 56px;
-  background: #74E2C7;
+  background: #74e2c7;
   margin-bottom: 27px;
   color: #000;
   font-weight: 700;
@@ -80,10 +80,10 @@ main .head .headBox .elem:nth-child(1) .block:nth-child(2) button:nth-child(1) {
   border: 0;
 }
 main .head .headBox .elem:nth-child(1) .block:nth-child(2) button:nth-child(1):hover {
-  background-color: #C8FFF1;
+  background-color: #c8fff1;
 }
 main .head .headBox .elem:nth-child(1) .block:nth-child(2) button:nth-child(1):active {
-  background-color: #468C7B;
+  background-color: #468c7b;
 }
 main .head .headBox .elem:nth-child(1) .block h1 {
   font-weight: 700;
@@ -94,13 +94,13 @@ main .head .headBox .elem:nth-child(1) .block h1 {
   margin-bottom: 27px;
 }
 main .head .headBox .elem:nth-child(1) .block h1 span {
-  color: #74E2C7;
+  color: #74e2c7;
 }
 main .head .headBox .elem:nth-child(1) .block p {
   font-weight: 300;
   font-size: 30px;
   line-height: 110%;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.6;
   transition: all 1.5s;
 }
@@ -124,7 +124,7 @@ main .head .headBox .elem:nth-child(2) nav li a {
   font-weight: 200;
   font-size: 16px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.6;
   text-decoration: none;
 }
@@ -153,13 +153,13 @@ main .content .box .block:nth-child(1) {
 }
 main .content .box .block:nth-child(1) .text {
   padding-right: 20px;
-  border-right: 3px solid #74E2C7;
+  border-right: 3px solid #74e2c7;
 }
 main .content .box .block:nth-child(1) .text p {
   font-weight: 300;
   font-size: 24px;
   line-height: 130%;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 26px;
 }
 main .content .box .block:nth-child(1) .masseg {
@@ -181,7 +181,7 @@ main .content .box .block:nth-child(2) .mySwiper .swiperCont {
 }
 main .content .box .block:nth-child(2) .mySwiper .swiperCont .slid {
   width: 100%;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   padding: 0 0 20px;
 }
 main .content .box .block:nth-child(2) .mySwiper .swiperCont .slid .gridBloc {
@@ -234,7 +234,7 @@ main .bowls .box h2 {
   font-weight: 600;
   font-size: 42px;
   line-height: 130%;
-  color: #74E2C7;
+  color: #74e2c7;
   margin-bottom: 24px;
 }
 main .bowls .box .filter {
@@ -244,8 +244,8 @@ main .bowls .box .filter {
   color: #fff;
 }
 main .bowls .box .filter .elem:nth-child(2) {
-  border-left: 1px solid #74E2C7;
-  border-right: 1px solid #74E2C7;
+  border-left: 1px solid #74e2c7;
+  border-right: 1px solid #74e2c7;
 }
 main .bowls .box .filter p {
   opacity: 0.6;
@@ -294,7 +294,7 @@ main .bowls .box .scrolBox .mtbox .gridFil .gridElem p {
   font-weight: 700;
   font-size: 91.5367px;
   line-height: 90%;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.2;
 }
 main .bowls .box .scrolBox .mtbox .gridFil .gridElem p:nth-child(1) {
@@ -311,7 +311,7 @@ main .bowls .box .scrolBox .mtbox .gridFil .gridElem .cheked {
   height: 24px;
   border-radius: 50%;
   opacity: 0.6;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   bottom: 10px;
   right: 10px;
   display: flex;
@@ -327,7 +327,7 @@ main .bowls .box .scrolBox .mtbox .gridFil .gridElem .cheked input {
 main .bowls .box .scrolBox .mtbox .gridFil .gridElem .cheked .el {
   width: 16px;
   height: 16px;
-  background: #74E2C7;
+  background: #74e2c7;
   opacity: 0;
   border-radius: 50%;
 }
@@ -337,14 +337,14 @@ main .bowls .box .scrolBox .mtbox .gridFil .gridElem .fresh {
   line-height: 100%;
 }
 main .bowls .box .scrolBox .mtbox .gridFil .grActive {
-  border-color: #74E2C7;
+  border-color: #74e2c7;
 }
 main .bowls .box .scrolBox .mtbox .gridFil .grActive p {
-  color: #74E2C7;
+  color: #74e2c7;
   opacity: 0.2;
 }
 main .bowls .box .scrolBox .mtbox .gridFil .grActive .cheked {
-  border-color: #468C7B;
+  border-color: #468c7b;
 }
 main .bowls .box .scrolBox .mtbox .gridFil .grActive .cheked .el {
   opacity: 0.3;
@@ -371,7 +371,7 @@ main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(1) input {
   color: #fff;
   height: 56px;
   background-color: transparent;
-  outline-color: #74E2C7;
+  outline-color: #74e2c7;
   border: 1px solid #fff;
   border-radius: 5px;
   margin-bottom: 24px;
@@ -381,7 +381,7 @@ main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(1) input {
 }
 main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(1) button {
   width: 100%;
-  background-color: #74E2C7;
+  background-color: #74e2c7;
   border: 0;
   height: 56px;
   border-radius: 5px;
@@ -392,10 +392,10 @@ main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(1) button {
   cursor: pointer;
 }
 main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(1) button:hover {
-  background: #C8FFF1;
+  background: #c8fff1;
 }
 main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(1) button:active {
-  background: #468C7B;
+  background: #468c7b;
 }
 main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(3) label {
   display: flex;
@@ -420,14 +420,14 @@ main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(3) label span {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(3) label span::after {
   content: "";
   display: block;
   width: 16px;
   height: 16px;
-  background-color: #468C7B;
+  background-color: #468c7b;
   border-radius: 50%;
   opacity: 0;
 }
@@ -457,14 +457,14 @@ main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(2) label span {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(2) label span::after {
   content: "";
   display: block;
   width: 16px;
   height: 16px;
-  background-color: #468C7B;
+  background-color: #468c7b;
   border-radius: 50%;
   opacity: 0;
 }
@@ -481,4 +481,34 @@ main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(2) label .ch:che
   width: 21px;
   height: 20px;
   background: url("../icon/paginationActive.svg") !important;
+}
+
+.a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a .swiper-button-prev:after {
+  color: #74E2C7;
+  font-size: 15px;
+  position: static !important;
+}
+.a .swiper-button-next:after {
+  color: #74E2C7;
+  font-size: 15px;
+}
+.a .swiper-button-prev {
+  position: static !important;
+  margin: 0;
+}
+.a .swiper-button-next {
+  position: static !important;
+  margin: 0;
+}
+.a .swiper-pagination {
+  position: static !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
