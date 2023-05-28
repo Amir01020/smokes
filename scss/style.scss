@@ -12,6 +12,8 @@
     align-items: $c;
 }
 
+
+
 body {
     background-color: #1E1E1E;
     font-family: 'Mulish';
@@ -574,3 +576,21 @@ main {
         }
     }
 }
+// .swiper-pagination{
+//     background-color: red;
+// }
+
+
+.swiper-pagination{
+    .swiper-pagination-bullet{
+        width: 21px;
+        height: 20px;
+        background: url('../icon/pagination.svg') !important  ;
+    }
+.swiper-pagination-bullet-active {
+    width: 21px;
+    height: 20px;
+    background: url('../icon/paginationActive.svg') !important  ;
+}
+}
+
