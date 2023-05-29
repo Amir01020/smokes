@@ -439,6 +439,7 @@ main {
                         display: grid;
                         grid-template-columns: repeat(3, 1fr);
                         gap: 20px;
+
                         .myElement {
                             color: #fff;
 
@@ -523,6 +524,7 @@ main {
                                     }
                                 }
                             }
+
                             &:nth-child(2) {
                                 label {
                                     @include flex(flex, start, center);
@@ -565,6 +567,63 @@ main {
                                 }
                             }
 
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .praiyce {
+        .box {
+            padding: 0 20px;
+
+            h2 {
+                font-weight: 600;
+                font-size: 42px;
+                line-height: 130%;
+                color: #74E2C7;
+            }
+
+            .boxSwip {
+                .swiper-slide {
+                    width: 100%;
+                    .content {
+
+                        background: #121212;
+                        border: 1px solid rgba(255, 255, 255, 0.6);
+                        border-radius: 100px 100px 10px 10px;
+
+                        h3 {
+                            font-weight: 1000;
+                            font-size: 38px;
+                            line-height: 130%;
+                            color: #fff;
+                        }
+
+                        .img {
+                            height: 256px;
+                            position: relative;
+
+                            img {
+                                position: absolute;
+                                width: 100%;
+                                top: 0;
+                                left: 0;
+                                z-index: 0;
+                            }
+
+                            h3 {
+                                position: absolute;
+                                left: 20px;
+                                bottom: 20px;
+                                z-index: 1;
+                            }
+                        }
+                        .text{
+                            @include flex(flex,space-between, center);
 
                         }
                     }
