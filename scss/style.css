@@ -471,50 +471,6 @@ main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(2) label span::a
 main .bowls .box .scrolBox .mtbox .myadres .myElement:nth-child(2) label .ch:checked + span::after {
   opacity: 1;
 }
-main .praiyce .box {
-  padding: 0 20px;
-}
-main .praiyce .box h2 {
-  font-weight: 600;
-  font-size: 42px;
-  line-height: 130%;
-  color: #74E2C7;
-}
-main .praiyce .box .boxSwip .swiper-slide {
-  width: 100%;
-}
-main .praiyce .box .boxSwip .swiper-slide .content {
-  background: #121212;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 100px 100px 10px 10px;
-}
-main .praiyce .box .boxSwip .swiper-slide .content h3 {
-  font-weight: 1000;
-  font-size: 38px;
-  line-height: 130%;
-  color: #fff;
-}
-main .praiyce .box .boxSwip .swiper-slide .content .img {
-  height: 256px;
-  position: relative;
-}
-main .praiyce .box .boxSwip .swiper-slide .content .img img {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-main .praiyce .box .boxSwip .swiper-slide .content .img h3 {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  z-index: 1;
-}
-main .praiyce .box .boxSwip .swiper-slide .content .text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
 .swiper-pagination .swiper-pagination-bullet {
   width: 21px;
@@ -555,4 +511,4 @@ main .praiyce .box .boxSwip .swiper-slide .content .text {
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
-}}
+}/*# sourceMappingURL=style.css.map */
