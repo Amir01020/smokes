@@ -274,7 +274,254 @@ main {
                 }
               }
             }
-          }
+
+            .scrolBox {
+
+                width: 100%;
+                overflow: hidden;
+
+                .mtbox {
+                    @include flex(flex, start, center);
+                    gap: 10px;
+                    transform: translateX(-200%);
+
+                    .gridFil {
+                        min-width: 100%;
+                        display: grid;
+                        padding: 10px;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(2, 224px);
+                        gap: 20px;
+                        margin-top: 24px;
+
+                        .gridElem {
+                            border: 1px solid #ffffff9c;
+                            border-radius: 100px 100px 10px 10px;
+                            padding: 48px 0 0 40px;
+                            position: relative;
+                            overflow: hidden;
+                            @include flex(flex, start, center);
+
+
+                            p {
+                                font-weight: 700;
+                                font-size: 91.5367px;
+                                line-height: 90%;
+                                color: #FFFFFF;
+                                opacity: 0.2;
+
+                                &:nth-child(1) {
+                                    margin-bottom: 14px;
+                                }
+                            }
+
+                            .img {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+
+                            .cheked {
+                                position: absolute;
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                opacity: 0.6;
+                                border: 1px solid #FFFFFF;
+                                bottom: 10px;
+                                right: 10px;
+                                @include flex(flex, center, center);
+
+                                input {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    opacity: 0;
+                                }
+
+                                .el {
+                                    width: 16px;
+                                    height: 16px;
+                                    background: #74E2C7;
+                                    opacity: 0;
+                                    border-radius: 50%;
+
+                                }
+                            }
+
+                            .fresh {
+                                font-weight: 700;
+                                font-size: 45.2953px;
+                                line-height: 100%;
+                            }
+                        }
+
+                        .grActive {
+                            border-color: #74E2C7;
+
+                            p {
+                                color: #74E2C7;
+                                opacity: 0.2;
+                            }
+
+                            .cheked {
+                                border-color: #468C7B;
+
+                                .el {
+                                    opacity: 0.3;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            p {
+                                font-size: 60px;
+                                line-height: 70%;
+                            }
+                        }
+
+
+                    }
+
+                    .myadres {
+                        min-width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 20px;
+
+                        .myElement {
+                            color: #fff;
+
+                            &:nth-child(1) {
+                                padding: 10px;
+
+                                input {
+                                    width: 100%;
+                                    padding: 24px;
+                                    color: #fff;
+                                    height: 56px;
+                                    background-color: transparent;
+                                    outline-color: #74E2C7;
+                                    border: 1px solid #fff;
+                                    border-radius: 5px;
+                                    margin-bottom: 24px;
+                                    font-weight: 300;
+                                    font-size: 16px;
+                                    line-height: 130%;
+                                }
+
+                                button {
+                                    width: 100%;
+                                    background-color: #74E2C7;
+                                    border: 0;
+                                    height: 56px;
+                                    border-radius: 5px;
+                                    color: #000;
+                                    font-weight: 700;
+                                    font-size: 24px;
+                                    line-height: 30px;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        background: #C8FFF1;
+                                    }
+
+                                    &:active {
+                                        background: #468C7B;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                label {
+                                    @include flex(flex, start, center);
+                                    margin-bottom: 33px;
+                                    gap: 10px;
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    cursor: pointer;
+
+                                    input {
+                                        display: none;
+
+                                    }
+
+                                    span {
+                                        display: block;
+                                        width: 24px;
+                                        height: 24px;
+                                        border-radius: 50%;
+                                        opacity: 0.6;
+                                        @include flex(flex, center, center);
+                                        border: 1px solid #FFFFFF;
+
+                                        &::after {
+                                            content: '';
+                                            display: block;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: #468C7B;
+                                            border-radius: 50%;
+                                            opacity: 0;
+
+                                        }
+                                    }
+
+                                    .ch:checked+span::after {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                label {
+                                    @include flex(flex, start, center);
+                                    margin-bottom: 33px;
+                                    gap: 10px;
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    cursor: pointer;
+
+                                    input {
+                                        display: none;
+
+                                    }
+
+                                    span {
+                                        display: block;
+                                        width: 24px;
+                                        height: 24px;
+                                        border-radius: 50%;
+                                        opacity: 0.6;
+                                        @include flex(flex, center, center);
+                                        border: 1px solid #FFFFFF;
+
+                                        &::after {
+                                            content: '';
+                                            display: block;
+                                            width: 16px;
+                                            height: 16px;
+                                            background-color: #468C7B;
+                                            border-radius: 50%;
+                                            opacity: 0;
+
+                                        }
+                                    }
+
+                                    .ch:checked+span::after {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+            }
+
         }
       }
     }
@@ -607,4 +854,61 @@ main {
         width: fit-content;
         height: 100%;
     }
-}
+
+    .praiyce {
+        .box {
+            padding: 0 20px;
+
+            h2 {
+                font-weight: 600;
+                font-size: 42px;
+                line-height: 130%;
+                color: #74E2C7;
+            }
+
+            .boxSwip {
+                .swiper-slide {
+                    width: 100%;
+                    .content {
+
+                        background: #121212;
+                        border: 1px solid rgba(255, 255, 255, 0.6);
+                        border-radius: 100px 100px 10px 10px;
+
+                        h3 {
+                            font-weight: 1000;
+                            font-size: 38px;
+                            line-height: 130%;
+                            color: #fff;
+                        }
+
+                        .img {
+                            height: 256px;
+                            position: relative;
+
+                            img {
+                                position: absolute;
+                                width: 100%;
+                                top: 0;
+                                left: 0;
+                                z-index: 0;
+                            }
+
+                            h3 {
+                                position: absolute;
+                                left: 20px;
+                                bottom: 20px;
+                                z-index: 1;
+                            }
+                        }
+                        .text{
+                            @include flex(flex,space-between, center);
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}}
