@@ -17,11 +17,11 @@
 
 <body>
   <header class="oupenScroll">
-    <nav>
+    <nav >
       <ul>
-        <li><a href="#"><img src="./icon/Vector (9).png" alt=""></a></li>
+        <li><a href="#" class="logo"><img src="./icon/Vector (9).png" alt=""></a></li>
         <li>
-          <a href="">Услуги</a>
+          <a href="" class="active">Услуги</a>
           <a href="">Акции</a>
           <a href="">Отзывы</a>
           <a href="">Блог</a>
@@ -31,7 +31,7 @@
       <ul>
         <li>
           <button>
-            Город 
+            Город
             <img src="./icon/Vector 1.png" width="10px" alt="">
           </button>
 
@@ -42,6 +42,10 @@
           </button>
         </li>
       </ul>
+    </nav>
+    <nav class="oupen">
+      <ul><li><a href="#"><img src="./icon/Vector (9).png" alt=""></a></li></ul>
+      <ul><li><a href="#"><img src="./icon/Frame 82.png" alt=""></a></li></ul>
     </nav>
   </header>
   <main>
@@ -66,7 +70,7 @@
             <div class="elemBlock">
               <img src="icon/Group 1 (1).png" width="90%" alt="">
             </div>
-            <nav>
+            <nav id="heads">
               <li>
                 <a href="#">
                   <img src="./icon/Vector (9).png" alt="">
@@ -108,7 +112,7 @@
         </div>
       </div>
     </section>
-    <section class="content" >
+    <section class="content">
       <div class="cont">
         <div class="box">
           <div class="block" id="caunt">
@@ -238,17 +242,17 @@
           <h2>Собери свой кальян</h2>
           <div class="filter">
             <div class="elem">
-              <p class="active">Чаша</p>
+              <p class="active" id="filt" data-name="чаша">Чаша</p>
             </div>
             <div class="elem">
-              <p>Табак</p>
+              <p id="filt" data-name="табак">Табак</p>
             </div>
             <div class="elem">
-              <p>Адрес</p>
+              <p id="filt" data-name="адрес">Адрес</p>
             </div>
           </div>
           <div class="scrolBox">
-            <div class="mtbox">
+            <div class="mtbox" data-name="sssss">
               <div class="gridFil">
                 <div class="gridElem grActive">
                   <div class="text">
@@ -386,7 +390,7 @@
               <div class="myadres">
                 <div class="myElement dddd">
                   <input type="text" placeholder="Имя">
-                  <input type="text">
+                  <input type="text" id="selector">
                   <button>Заказть</button>
                 </div>
                 <div class="myElement">
@@ -955,7 +959,7 @@
 
           </h4>
           <input type="text" placeholder="Имя">
-          <input type="text">
+          <input type="text" id="selector">
           <button>
             Обратная связь
           </button>
@@ -970,7 +974,7 @@
           <div class="imgs">
             <img src="./icon/Vector (2).svg" alt="">
           </div>
-          
+
           <h4>Контактные данные:</h4>
           <div class="masag">
             <a href=""><img src="./icon/whatsap.svg" alt=""></a>
@@ -984,6 +988,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/imask"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script>
@@ -1011,7 +1016,18 @@
       },
     });
     let swiper = new Swiper(".mySwiper2", {
-      slidesPerView: 3,
+      breakpoints: {
+        1400: {
+          slidesPerView: 3,
+        },
+        900: {
+          slidesPerView: 2,
+        },
+        600:{
+          slidesPerView: 1,
+        }
+
+      },
       spaceBetween: 30,
       pagination: {
         el: ".swiper-pagination",
@@ -1019,13 +1035,27 @@
       },
     });
     let swiper2 = new Swiper(".mySwiper3", {
-      slidesPerView: 3,
+      
       spaceBetween: 30,
+      breakpoints: {
+        1400: {
+          slidesPerView: 3,
+        },
+        900: {
+          slidesPerView: 2,
+        },
+        600:{
+          slidesPerView: 1,
+        }
+
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
     });
+
+
   </script>
   <script src="js/script.js"></script>
 </body>

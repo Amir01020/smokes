@@ -22,16 +22,19 @@ body {
 }
 
 .cont {
-    max-width: 1800px;
+    max-width: 1440px;
     margin: 0 auto;
+    // overflow: hidden;
 }
 
 header {
     background: linear-gradient(180deg, #121212 10.94%, rgba(18, 18, 18, 0) 100%);
+    backdrop-filter: blur(40px);
     position: fixed;
     width: 100%;
     z-index: 15;
     transform: translateY(-100%);
+
     nav {
         max-width: 1800px;
         margin: 0 auto;
@@ -41,12 +44,14 @@ header {
         ul {
             @include flex(flex, space-between, center);
             gap: 35px;
-
+            
             li {
                 @include flex(flex, center, center);
                 gap: 20px;
 
+
                 a {
+                    
                     text-decoration: none;
                     color: #fff;
                     opacity: 0.6;
@@ -54,14 +59,23 @@ header {
                     &:hover {
                         opacity: 1;
                     }
+                    
+                }
+                .logo{
+                    opacity: 1;
+                }
+                .active{
+                    opacity: 1;
                 }
             }
+            
 
             &:nth-child(2) {
                 gap: 20px;
 
                 li {
                     button {
+                        cursor: pointer;
                         width: 99px;
                         height: 35px;
                         border: 1px solid #74E2C7;
@@ -73,15 +87,19 @@ header {
                         font-size: 12px;
                         line-height: 15px;
                         color: #74E2C7;
-                        
+
                     }
                 }
 
             }
         }
     }
+    .oupen{
+        display: none;
+    }
 }
-.oupenScroll1{
+
+.oupenScroll1 {
     transform: translateY(0);
 }
 
@@ -90,7 +108,7 @@ main {
         background-image: url(../icon/image\ 5.png);
         background-position: center;
         background-size: cover;
-        height: 100vh;
+        height: 730px;
 
         .cont {
             height: 100%;
@@ -194,9 +212,10 @@ main {
 
                     nav {
                         text-align: right;
-                        position: absolute;
+                        position: fixed;
                         top: 20px;
                         right: 20px;
+                        z-index: 10;
 
                         li {
                             margin-bottom: 14px;
@@ -393,13 +412,13 @@ main {
                 .mtbox {
                     @include flex(flex, start, center);
                     gap: 10px;
-                    transform: translateX(-200%);
+                    transform: translateX(0%);
 
                     .gridFil {
                         min-width: 100%;
                         display: grid;
                         padding: 10px;
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
                         grid-template-rows: repeat(2, 224px);
                         gap: 20px;
                         margin-top: 24px;
@@ -630,6 +649,9 @@ main {
                         }
                     }
                 }
+                .filt1{transform: translateX(0);}
+                .filt2{transform: translateX(-100%);}
+                .filt3{transform: translateX(-200%);}
             }
 
         }
@@ -676,11 +698,11 @@ main {
                         }
 
                         .img {
-                            height: 256px;
+                            
                             position: relative;
 
                             img {
-                                position: absolute;
+                                position: relative;
                                 width: 100%;
                                 top: 0;
                                 left: 0;
@@ -1118,5 +1140,188 @@ footer {
         position: static !important;
         width: fit-content;
         height: 100%;
+    }
+}
+
+
+@media (min-width:1440px) {
+    main {
+        .head {
+            height: 730px;
+
+
+        }
+    }
+}
+
+@media (max-width:1400px) {
+    main {
+        .head {
+            .headBox {
+                
+                z-index: 2;
+                justify-content: start;
+
+                .elem {
+                    position: relative;
+                    height: 100% !important;
+                    &:nth-child(2) {
+                        .elemBlock {
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 0;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:1024px) {
+    .boxSwip{
+        .content{
+            .img{
+                height: fit-content !important;
+                img{
+                    position: relative !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1250px) {
+    main {
+        .content{
+            
+            .box{
+                flex-wrap: wrap ;
+                .block{
+                    width: 100% !important;
+                }
+            }
+        }
+        .praiyce{
+            h3{
+                font-size: 20px !important;
+            }
+            
+            .text{
+                p{
+                    font-size: 10px !important;
+                }
+                span{
+                    font-size: 10px !important;
+
+                }
+            }
+            .sum{
+                display: block !important;
+                button{
+                    margin-top: 10px;
+                    width: 100% !important;
+                }
+            }
+        }
+        .coments{
+            .box{
+                .myComent{
+                    height: fit-content !important;
+                    .block{
+                        flex-wrap: wrap !important;
+                        .status{
+                            flex-wrap: wrap !important;
+                            
+                            img{
+                                width: 10% !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+@media (max-width:963px) {
+    main {
+        .head {
+            height: 730px;
+        }
+        .question{
+            .box{
+                .flexBlock{
+                    .elem{
+                        width: 100% !important;
+                        &:nth-child(2){
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    footer{
+        .box{
+            flex-wrap: wrap;
+            justify-content: center;
+            .elem{
+                width: 40% !important;
+                &:nth-child(3){
+                    order: -1;
+                }
+            }
+        }
+    }
+}
+@media (max-width:768px) {
+    header{
+        nav{
+            display: none;
+        }
+        .oupen{
+            ul{
+                opacity: 1;
+                li{
+                    opacity: 1;
+                    a{
+                        opacity: 1;
+                    }
+                }
+            }
+            display: flex;
+        }
+    }
+    footer{
+        .box{
+            .elem{
+                &:nth-child(3){
+                    order: 0;
+                }
+                width: 100% !important;
+            }
+        }
+    }
+}
+@media (max-width:600px){
+    main{
+        .headBox{
+            padding-top: 50px !important;
+            #heads{
+                display: none;
+            }
+            .elem{
+                &:nth-child(2){
+                    
+                }
+            }
+        }
+       
+    }
+    header{
+        transform: translateX(0);
     }
 }
