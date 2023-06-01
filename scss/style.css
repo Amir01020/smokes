@@ -24,10 +24,11 @@ header {
           backdrop-filter: blur(40px);
   position: fixed;
   width: 100%;
-  z-index: 15;
+  z-index: 21;
   transform: translateY(-100%);
 }
 header nav {
+  padding: 5px 10px;
   max-width: 1800px;
   margin: 0 auto;
   display: flex;
@@ -86,6 +87,52 @@ header .oupen {
 
 .oupenScroll1 {
   transform: translateY(0);
+}
+
+.burgerMenu {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.5960784314);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.burgerMenu .box {
+  width: 100%;
+  padding: 30px;
+  color: #fff;
+}
+.burgerMenu .box .elem {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #74E2C7;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.burgerMenu .box .elem p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+  transition: 0.1s;
+}
+.burgerMenu .box .elem:hover {
+  background-color: #74E2C7;
+}
+.burgerMenu .box .elem:hover p {
+  color: #000;
+}
+
+.activeMenu {
+  display: flex;
 }
 
 main .head {
@@ -239,6 +286,76 @@ main .content .box .block:nth-child(1) .masseg {
   align-items: start;
   gap: 28px;
 }
+main .content .box .block:nth-child(1) .masseg a {
+  position: relative;
+  opacity: 0.6;
+}
+main .content .box .block:nth-child(1) .masseg a:nth-child(1)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Vector.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+main .content .box .block:nth-child(1) .masseg a:nth-child(2)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Subtract.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+main .content .box .block:nth-child(1) .masseg a:nth-child(3)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Vector-1.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+main .content .box .block:nth-child(1) .masseg a:nth-child(4)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Vector-2.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+main .content .box .block:nth-child(1) .masseg a:hover {
+  opacity: 1;
+}
+main .content .box .block:nth-child(1) .masseg a:hover::after {
+  opacity: 1;
+}
 main .content .box .block:nth-child(2) {
   width: 65%;
 }
@@ -298,6 +415,48 @@ main .content .box .block:nth-child(2) .mySwiper .swiperCont .slid .gridBloc .gr
 main .content .box .block:nth-child(2) .mySwiper .swiperCont .slid .gridBloc .gridElem:nth-child(4) {
   background-image: url(../icon/Rectangle\ 6.png);
 }
+main .content .box .blockPhone {
+  width: 100%;
+  display: none;
+}
+main .content .box .blockPhone .gridBloc {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(147px, 1fr));
+  grid-template-rows: 359px 235px;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+main .content .box .blockPhone .gridBloc .gridElem {
+  border-radius: 100px 100px 10px 10px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 53.65%, rgba(0, 0, 0, 0.68) 72.92%, #000000 100%), url(.jpg);
+  background-position: center;
+  position: relative;
+  background-size: cover;
+}
+main .content .box .blockPhone .gridBloc .gridElem .text {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  max-width: 70%;
+  color: #fff;
+}
+main .content .box .blockPhone .gridBloc .gridElem .icon {
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+main .content .box .blockPhone .gridBloc .gridElem:nth-child(1) {
+  grid-column: 1/3;
+  background-image: url(../icon/Rectangle\ 5.png);
+  background-position: center end;
+}
+main .content .box .blockPhone .gridBloc .gridElem:nth-child(2) {
+  background-image: url(../icon/Rectangle\ 7.png);
+}
+main .content .box .blockPhone .gridBloc .gridElem:nth-child(3) {
+  background-image: url(../icon/Rectangle\ 6.png);
+}
 main .bowls .box {
   padding: 0 20px;
 }
@@ -338,7 +497,8 @@ main .bowls .box .scrolBox {
 main .bowls .box .scrolBox .mtbox {
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  padding-top: 40px;
   gap: 10px;
   transform: translateX(0%);
 }
@@ -356,7 +516,6 @@ main .bowls .box .scrolBox .mtbox .gridFil .gridElem {
   border-radius: 100px 100px 10px 10px;
   padding: 48px 0 0 40px;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -370,6 +529,44 @@ main .bowls .box .scrolBox .mtbox .gridFil .gridElem p {
 }
 main .bowls .box .scrolBox .mtbox .gridFil .gridElem p:nth-child(1) {
   margin-bottom: 14px;
+}
+main .bowls .box .scrolBox .mtbox .gridFil .gridElem .nn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+main .bowls .box .scrolBox .mtbox .gridFil .gridElem .nn span {
+  font-weight: 700 !important;
+  font-size: 91.5367px !important;
+  line-height: 90% !important;
+  color: #FFFFFF !important;
+  opacity: 0.2;
+}
+main .bowls .box .scrolBox .mtbox .gridFil .gridElem .nn .number {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+main .bowls .box .scrolBox .mtbox .gridFil .gridElem .nn .number hr {
+  width: 100%;
+  margin: 20px 0;
+}
+main .bowls .box .scrolBox .mtbox .gridFil .gridElem .nn .number img {
+  cursor: pointer;
+}
+main .bowls .box .scrolBox .mtbox .gridFil .gridElem .nn .number img:nth-child(3) {
+  transform: rotate(180deg);
+}
+main .bowls .box .scrolBox .mtbox .gridFil .gridElem span {
+  font-weight: 700 !important;
+  font-size: 91.5367px !important;
+  line-height: 90% !important;
+  color: #FFFFFF !important;
+  opacity: 0.2;
 }
 main .bowls .box .scrolBox .mtbox .gridFil .gridElem .img {
   position: absolute;
@@ -550,6 +747,26 @@ main .bowls .box .scrolBox .filt2 {
 }
 main .bowls .box .scrolBox .filt3 {
   transform: translateX(-200%);
+}
+main .bowls .box .scrolBox .opshen {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: start;
+  display: none;
+}
+main .bowls .box .scrolBox .opshen p {
+  text-align: right;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #FFFFFF;
+  opacity: 0.6;
+  cursor: pointer;
+}
+main .bowls .box .scrolBox .opshen p:hover {
+  opacity: 1;
+  color: #74E2C7;
 }
 main .praiyce .box {
   padding: 0 20px;
@@ -898,6 +1115,76 @@ footer .box .elem:nth-child(3) .masag {
   align-items: center;
   margin-bottom: 12px;
 }
+footer .box .elem:nth-child(3) .masag a {
+  position: relative;
+  opacity: 0.6;
+}
+footer .box .elem:nth-child(3) .masag a:nth-child(1)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Vector.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+footer .box .elem:nth-child(3) .masag a:nth-child(2)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Subtract.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+footer .box .elem:nth-child(3) .masag a:nth-child(3)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Vector-1.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+footer .box .elem:nth-child(3) .masag a:nth-child(4)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background-image: url(../icon/Vector-2.png);
+  background-position: center;
+  background-size: 89%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+footer .box .elem:nth-child(3) .masag a:hover {
+  opacity: 1;
+}
+footer .box .elem:nth-child(3) .masag a:hover::after {
+  opacity: 1;
+}
 footer .box .elem:nth-child(3) p {
   font-weight: 300;
   font-size: 23px;
@@ -1014,6 +1301,35 @@ footer .box .elem:nth-child(3) p {
     width: 10% !important;
   }
 }
+@media (max-width: 1100px) {
+  .gridFil {
+    grid-template-rows: 223px !important;
+  }
+  .gridFil .gridElem {
+    display: none !important;
+  }
+  .gridFil .gridElem:nth-child(1) {
+    display: flex !important;
+  }
+  .gridFil .gridElem:nth-child(2) {
+    display: flex !important;
+  }
+  .opshen {
+    display: flex !important;
+  }
+  .gridFilActive {
+    grid-template-rows: repeat(2, 223px) !important;
+  }
+  .gridFilActive .gridElem {
+    display: block !important;
+  }
+  .gridFilActive .gridElem:nth-child(1) {
+    display: block !important;
+  }
+  .gridFilActive .gridElem:nth-child(2) {
+    display: block !important;
+  }
+}
 @media (max-width: 963px) {
   main .head {
     height: 730px;
@@ -1051,6 +1367,19 @@ footer .box .elem:nth-child(3) p {
   header .oupen ul li a {
     opacity: 1;
   }
+  .scrolBox .mtbox .myadres {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .scrolBox .mtbox .myadres .myElement:nth-child(1) {
+    grid-column: 1/3;
+    padding: 0 20px 0 0 !important;
+  }
+  .scrolBox .mtbox .myadres .myElement:nth-child(1) input {
+    width: 100%;
+  }
+  .scrolBox .mtbox .myadres .myElement:nth-child(1) button {
+    width: 100%;
+  }
   footer .box .elem {
     width: 100% !important;
   }
@@ -1059,6 +1388,19 @@ footer .box .elem:nth-child(3) p {
   }
 }
 @media (max-width: 600px) {
+  main .coments .comentText h2 {
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    line-height: 130% !important;
+  }
+  main .coments .comentText button {
+    padding: 13px 20px !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 90% !important;
+    width: 151px !important;
+    height: 70px !important;
+  }
   main .headBox {
     padding-top: 50px !important;
   }
@@ -1067,5 +1409,94 @@ footer .box .elem:nth-child(3) p {
   }
   header {
     transform: translateX(0);
+  }
+}
+@media (max-width: 500px) {
+  .head .headBox {
+    background-image: url(../icon/Group\ 1\ \(1\).png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom 45px right -200px;
+  }
+  .head .headBox .elem {
+    width: 100%;
+  }
+  .head .headBox .elem .block h1 {
+    font-size: 65px;
+  }
+  .head .headBox .elem .block button:nth-child(2) {
+    display: none;
+  }
+  .head .headBox .elem:nth-child(2) {
+    display: none;
+  }
+  section.content .box .block:nth-child(2) {
+    display: none;
+  }
+  section.content .box .blockPhone {
+    display: block;
+  }
+  .scrolBox .mtbox .myadres {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+    row-gap: 30px !important;
+  }
+  .scrolBox .mtbox .myadres .myElement {
+    grid-column: 1/2 !important;
+  }
+  .scrolBox .mtbox .myadres .myElement label {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 430px) {
+  section.head .headBox .elem .block h1 {
+    font-weight: 700 !important;
+    font-size: 55px !important;
+    line-height: 80% !important;
+  }
+  section.head .headBox .elem .block p {
+    width: 150px !important;
+    font-size: 18px !important;
+  }
+  .bowls .box .scrolBox .mtbox .gridFil {
+    grid-template-columns: repeat(2, minmax(110px, 1fr)) !important;
+    grid-template-rows: repeat(auto-fill, 250px) !important;
+    grid-auto-rows: 250px !important;
+    -moz-column-gap: 20px !important;
+         column-gap: 20px !important;
+    row-gap: 70px !important;
+  }
+  .bowls .box .scrolBox .mtbox .gridFil:nth-child(2) .gridElem .text p {
+    font-weight: 700 !important;
+    font-size: 29px !important;
+    line-height: 100% !important;
+  }
+  .bowls .box .scrolBox .mtbox .gridFil .gridElem {
+    padding: 30px 10px !important;
+    align-items: end !important;
+  }
+  .bowls .box .scrolBox .mtbox .gridFil .gridElem .text p {
+    font-weight: 700 !important;
+    font-size: 48px !important;
+    line-height: 100% !important;
+  }
+  .bowls .box .scrolBox .mtbox .gridFil .gridElem .img {
+    width: 100%;
+    top: -30% !important;
+    left: 0;
+  }
+  .bowls .box .scrolBox .mtbox .gridFil .gridElem .img img {
+    width: 100%;
+  }
+  .bowls .box .scrolBox .mtbox .gridFil .gridElem:nth-child(5) .text p {
+    font-weight: 700 !important;
+    font-size: 23px !important;
+    line-height: 100% !important;
+  }
+}
+@media (max-width: 395px) {
+  .gridFil {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 250px 250px !important;
   }
 }/*# sourceMappingURL=style.css.map */

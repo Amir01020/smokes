@@ -17,7 +17,7 @@
 
 <body>
   <header class="oupenScroll">
-    <nav >
+    <nav>
       <ul>
         <li><a href="#" class="logo"><img src="./icon/Vector (9).png" alt=""></a></li>
         <li>
@@ -29,13 +29,7 @@
         </li>
       </ul>
       <ul>
-        <li>
-          <button>
-            Город
-            <img src="./icon/Vector 1.png" width="10px" alt="">
-          </button>
-
-        </li>
+        
         <li>
           <button>
             <img src="./icon/Vector.svg" alt="">
@@ -44,10 +38,24 @@
       </ul>
     </nav>
     <nav class="oupen">
-      <ul><li><a href="#"><img src="./icon/Vector (9).png" alt=""></a></li></ul>
-      <ul><li><a href="#"><img src="./icon/Frame 82.png" alt=""></a></li></ul>
+      <ul>
+        <li><a href="#"><img src="./icon/Vector (9).png" alt=""></a></li>
+      </ul>
+      <ul>
+        <li ><a href="#"><img src="./icon/Frame 82.png" alt="" class="burger"></a></li>
+      </ul>
     </nav>
   </header>
+  <div class="burgerMenu">
+    <div class="box">
+      <div class="elem"><p>Услуги</p></div>
+      <div class="elem"><p>Акции</p></div>
+      <div class="elem"><p>Отзывы</p></div>
+      <div class="elem"><p>Блог</p></div>
+      <div class="elem"><p>Кейтеринг</p></div>
+      <div class="elem"><p>Вопросы</p></div>
+    </div>
+  </div>
   <main>
     <section class="head">
       <div class="cont">
@@ -129,6 +137,7 @@
               <a href="#"><img src="./icon/facebook.svg" alt=""></a>
               <a href="#"><img src="./icon/telegram.svg" alt=""></a>
             </div>
+
           </div>
           <div class="block">
             <div class="swiper mySwiper">
@@ -233,6 +242,42 @@
               </div>
             </div>
           </div>
+          <div class="blockPhone">
+            <div class="gridBloc">
+              <div class="gridElem">
+                <div class="text">
+                  <p>
+                    10% cкидка на первый заказ
+                  </p>
+                </div>
+                <div class="icon">
+                  <img src="./icon/Vector (10).png" alt="">
+                </div>
+              </div>
+              <div class="gridElem">
+                <div class="text">
+                  <p>
+                    Система лояльности
+                    получай выгоду от 50%
+                  </p>
+                </div>
+                <div class="icon">
+                  <img src="./icon/Vector (10).png" alt="">
+                </div>
+              </div>
+              <div class="gridElem">
+                <div class="text">
+                  <p>
+                    Распродажи на instagram получи чашу в подарок
+                  </p>
+                </div>
+                <div class="icon">
+                  <img src="./icon/Vector (10).png" alt="">
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -254,7 +299,7 @@
           <div class="scrolBox">
             <div class="mtbox" data-name="sssss">
               <div class="gridFil">
-                <div class="gridElem grActive">
+                <div class="gridElem grActive" id="bowl">
                   <div class="text">
                     <p>1 <br>
 
@@ -268,7 +313,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem">
+                <div class="gridElem" id="bowl">
                   <div class="text">
                     <p>2
                       <br> Чаша
@@ -282,7 +327,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem">
+                <div class="gridElem" id="bowl">
                   <div class="text">
                     <p>3
                       <br> Чаша
@@ -296,7 +341,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem">
+                <div class="gridElem" id="bowl">
                   <div class="text">
                     <p>4
                       <br> Чаша
@@ -310,7 +355,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem">
+                <div class="gridElem" id="bowl">
                   <div class="text ">
                     <p class="fresh">Фруктовая<br>
                       чаша</p>
@@ -323,9 +368,19 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem">
+                <div class="gridElem" id="bowl">
                   <div class="text">
-                    <p>6 <br>Чаша</p>
+                    
+                    <div class="nn">
+                      <span>1</span>
+                      <div class="number">
+                        <img src="./icon/стрелка.png" alt="">
+                        <hr>
+                        <img src="./icon/стрелка.png" alt="">
+                      </div>
+                    </div>
+                    <span>Чаша</span>
+                    
                   </div>
                   <div class="img">
                     <img src="./icon/image 13.png" alt="">
@@ -337,7 +392,7 @@
                 </div>
               </div>
               <div class="gridFil">
-                <div class="gridElem grActive">
+                <div class="gridElem grActive" id="tobacco">
                   <div class="text">
                     <p>Легкий</p>
                   </div>
@@ -349,7 +404,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem ">
+                <div class="gridElem " id="tobacco">
                   <div class="text">
                     <p>Легкий <br> премиум</p>
                   </div>
@@ -361,7 +416,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem ">
+                <div class="gridElem " id="tobacco">
                   <div class="text">
                     <p>Легкий <br> премиум</p>
                   </div>
@@ -373,7 +428,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem ">
+                <div class="gridElem " id="tobacco">
                   <div class="text">
                     <p>Легкий <br> премиум</p>
                   </div>
@@ -440,6 +495,12 @@
 
                 </div>
               </div>
+
+            </div>
+            <div class="opshen">
+              <p>
+                Показать <br> больше
+              </p>
             </div>
 
           </div>
@@ -967,7 +1028,9 @@
         <div class="elem">
           <h4>Мы на карте</h4>
           <div class="card">
+            <div class="map" style="width: 100%; height: 300px; background-color: red;" id="map">
 
+            </div>
           </div>
         </div>
         <div class="elem">
@@ -988,6 +1051,9 @@
       </div>
     </div>
   </footer>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8vwy2tLXxwXz9HVOtVylxeJvw4YWHBbs&callback=initMap">
+    </script>
   <script src="https://unpkg.com/imask"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -1016,46 +1082,276 @@
       },
     });
     let swiper = new Swiper(".mySwiper2", {
+      // slidesPerView: 3,
       breakpoints: {
         1400: {
           slidesPerView: 3,
+        }, 1200: {
+          slidesPerView: 3,
+        }, 1140: {
+          slidesPerView: 3,
         },
-        900: {
+
+        500: {
+          slidesPerView: 1,
+        }, 600: {
           slidesPerView: 2,
         },
-        600:{
-          slidesPerView: 1,
-        }
 
       },
       spaceBetween: 30,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
     let swiper2 = new Swiper(".mySwiper3", {
-      
+
       spaceBetween: 30,
       breakpoints: {
         1400: {
           slidesPerView: 3,
+        }, 1200: {
+          slidesPerView: 3,
+        }, 1140: {
+          slidesPerView: 3,
         },
-        900: {
+
+        500: {
+          slidesPerView: 1,
+        }, 600: {
           slidesPerView: 2,
         },
-        600:{
-          slidesPerView: 1,
-        }
 
       },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
 
 
+  </script>
+  <script>
+
+    function initMap() {
+
+      const uluru = { lat: 55.7869338, lng: 49.1101183 };
+      let maps = document.querySelector('#map')
+      console.log(maps);
+      const map = new google.maps.Map(maps, {
+        zoom: 11,
+        center: uluru,
+        styles: [
+          {
+            "stylers": [
+              {
+                "color": "#1e8a6a"
+              }
+            ]
+          },
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#2f5b4e"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#212121"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.country",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#181818"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#1b1b1b"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#2c2c2c"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#8a8a8a"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#373737"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#3c3c3c"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway.controlled_access",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#4e4e4e"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#3d3d3d"
+              }
+            ]
+          }
+        ]
+      });
+
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+    initMap()
+    window.initMap = initMap;
   </script>
   <script src="js/script.js"></script>
 </body>
