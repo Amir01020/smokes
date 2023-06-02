@@ -77,10 +77,7 @@ burger.onclick=()=>{
                 navigeyt[i].dataset.aos = 'fade-left'
             }
         }
-        for(let i of navigeyt){
-
-            
-        }
+        
         setTimeout(() => {
             burgerMenu.style.opacity = 1
             for(let i of navigeyt){
@@ -94,6 +91,14 @@ burger.onclick=()=>{
         burger.src ='./icon/Frame 82.png'
         doc.body.style.overflow = 'auto'
         burgerMenu.style.opacity = 0
+        for (let i = 0; i < navigeyt.length; i++) {
+            if (i%2 == 0) {
+                navigeyt[i].dataset.aos = 'fade-right'
+            }else{
+
+                navigeyt[i].dataset.aos = 'fade-left'
+            }
+        }
         setTimeout(() => {
             burgerMenu.style.opacity = 1
             burgerMenu.classList.remove('activeMenu')
