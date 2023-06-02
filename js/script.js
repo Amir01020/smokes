@@ -59,6 +59,7 @@ filt.forEach((i) => {
 })
 
 let burger = doc.querySelector('.burger')
+let navigeyt = doc.querySelectorAll('#navigeyt')
 let burgerMenu = doc.querySelector('.burgerMenu')
 let menuAct = false
 burger.onclick=()=>{
@@ -67,11 +68,36 @@ burger.onclick=()=>{
         burgerMenu.classList.add('activeMenu')
         burger.src ='./icon/Frame 82 (1).png'
         doc.body.style.overflow = 'hidden'
+        burgerMenu.style.opacity = 0
+        for (let i = 0; i < navigeyt.length; i++) {
+            if (i%2 == 0) {
+                navigeyt[i].dataset.aos = 'fade-right'
+            }else{
+
+                navigeyt[i].dataset.aos = 'fade-left'
+            }
+        }
+        for(let i of navigeyt){
+
+            
+        }
+        setTimeout(() => {
+            burgerMenu.style.opacity = 1
+            for(let i of navigeyt){
+                i.dataset.aos = ''
+            }
+        }, 300);
+        
     }else{
         menuAct = false
-        burgerMenu.classList.remove('activeMenu')
+        
         burger.src ='./icon/Frame 82.png'
         doc.body.style.overflow = 'auto'
+        burgerMenu.style.opacity = 0
+        setTimeout(() => {
+            burgerMenu.style.opacity = 1
+            burgerMenu.classList.remove('activeMenu')
+        }, 300);
     }
     
 }

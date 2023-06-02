@@ -117,6 +117,7 @@ header {
     z-index: 20;
     @include flex(flex, center, center);
     display: none;
+    transition: 1s;
     .box {
         width: 100%;
         padding: 30px;
@@ -130,6 +131,7 @@ header {
             @include flex(flex, center, center);
             margin-bottom: 20px;
             cursor: pointer;
+            transition: all 2s !important;
 
             p {
                 font-weight: 600;
