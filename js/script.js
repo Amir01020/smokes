@@ -1,122 +1,558 @@
 let doc = document
-let heads = doc.querySelector('#heads')
-let caunt = doc.querySelector('#caunt')
-let oupenScroll = doc.querySelector('.oupenScroll')
-
-doc.body.onscroll = (event) => {
-    console.log();
-    if (window.scrollY >= caunt.offsetHeight * 3) {
-
-        oupenScroll.classList.add('oupenScroll1')
-    } else if (window.scrollY <= caunt.offsetHeight * 3) {
-        oupenScroll.classList.remove('oupenScroll1')
-
-    }
-    if (window.scrollY >= caunt.offsetHeight * 2) {
-        heads.style.opacity = 0
-
-    } else if (window.scrollY <= caunt.offsetHeight * 2) {
-
-        heads.style.opacity = 1
-    }
-
+let heads = doc.querySelector("#heads")
+let caunt = doc.querySelector("#caunt")
+// let cartsArr = [
+//     {
+//         name: "L-набор средний premium",
+//         tabac: "Musthave , Brusko , Black Burn",
+//         cap: "1 кальян 1 чаша",
+//         prise: "900 P",
+//         ugol: "4 шт.",
+//         id: "1",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "L-набор лёгкий classic",
+//         tabac: "Spectrum , Daily hookah ,endorphin",
+//         cap: "1 кальян 1 чаша",
+//         prise: "700 P",
+//         id: "2",
+//         ugol: "4 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "L-набор крепкий classic",
+//         tabac: "Spectrum , Daily hookah ,endorphin",
+//         cap: "1 кальян 1 чаша",
+//         prise: "900 P",
+//         id: "3",
+//         ugol: "4 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "L-набор средний classic",
+//         tabac: "Северный ветер , Chabacco , Duft",
+//         cap: "1 кальян 1 чаша",
+//         prise: "800 P",
+//         id: "4",
+//         ugol: "4 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "L-набор лёгкий premium",
+//         tabac: "Spectrum, Daily hookah , endorphin",
+//         cap: "1 кальян 1 чаша",
+//         prise: "800 P",
+//         id: "5",
+//         ugol: "4 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "L-набор крепкий premium",
+//         tabac: "Black Burn, Darkside , Bonche",
+//         cap: "1 кальян 1 чаша",
+//         prise: "1 000 P",
+//         id: "6",
+//         ugol: "4 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XL-набор средний premium",
+//         tabac: "Musthave , Brusko , Black Burn",
+//         cap: "1 кальян 2 чаша",
+//         prise: "1 300 P",
+//         ugol: "8 шт.",
+//         id: "7",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XL-набор лёгкий classic",
+//         tabac: "Spectrum , Daily hookah ,endorphin",
+//         cap: "1 кальян 2 чаша",
+//         prise: "1 000 P",
+//         id: "8",
+//         ugol: "8 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XL-набор крепкий classic",
+//         tabac: "Spectrum , Daily hookah ,endorphin",
+//         cap: "1 кальян 2 чаша",
+//         prise: "1 300 P",
+//         id: "9",
+//         ugol: "8 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XL-набор средний classic",
+//         tabac: "Северный ветер , Chabacco , Duft",
+//         cap: "1 кальян 2 чаша",
+//         prise: "1 200 P",
+//         id: "10",
+//         ugol: "8 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XL-набор лёгкий premium",
+//         tabac: "Spectrum, Daily hookah , endorphin",
+//         cap: "1 кальян 2 чаша",
+//         prise: "1 100 P",
+//         id: "11",
+//         ugol: "8 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XL-набор крепкий premium",
+//         tabac: "Black Burn, Darkside , Bonche",
+//         cap: "1 кальян 2 чаша",
+//         prise: "1 400 P",
+//         id: "12",
+//         ugol: "8 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XXL-набор средний premium",
+//         tabac: "Musthave , Brusko , Black Burn",
+//         cap: "2 кальян 4 чаша",
+//         prise: "1 600 P",
+//         ugol: "16 шт.",
+//         id: "1",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XXL-набор лёгкий classic",
+//         tabac: "Spectrum , Daily hookah ,endorphin",
+//         cap: "2 кальян 3 чаша",
+//         prise: "1 200 P",
+//         id: "2",
+//         ugol: "12 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XXL-набор крепкий classic",
+//         tabac: "Spectrum , Daily hookah ,endorphin",
+//         cap: "2 кальян 3 чаша",
+//         prise: "1 600 P",
+//         id: "3",
+//         ugol: "12 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XXL-набор средний classic",
+//         tabac: "Северный ветер , Chabacco , Duft",
+//         cap: "2 кальян 3 чаша",
+//         prise: "1 500 P",
+//         id: "4",
+//         ugol: "12 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XXL-набор лёгкий premium",
+//         tabac: "Spectrum, Daily hookah , endorphin",
+//         cap: "2 кальян 4 чаша",
+//         prise: "1 300 P",
+//         id: "4",
+//         ugol: "16 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     }, {
+//         name: "XXL-набор крепкий premium",
+//         tabac: "Black Burn, Darkside , Bonche",
+//         cap: "2 кальян 4 чаша",
+//         prise: "1 800 P",
+//         id: "4",
+//         ugol: "16 шт.",
+//         img: "./icon/Rectangle 17.png",
+//     },
+// ]
+let arrTabac = {
+    "easy":["Spectrum","Daily hookah","endorphin","Fumari","Element"],
+    "average":["sebero","Musthave","Darkside shot","Black Burn","Peter Ralf","Chabacco","Brusko","Duft","Северный ветер","Darkside shot"],
+    "strong":["Black Burn","Darkside","Bonche","Peter Ralf"]
 }
-let masc = document.querySelectorAll('#selector');
+let cartcriaytdata=doc.querySelector("#cartcriaytdata")
+function cartcriayt(name,tabac,cap,prise,id,ugol,img) {
+    const div1 = document.createElement("div");
+    div1.classList.add("swiper-slide");
+
+    const div2 = document.createElement("div");
+    div2.classList.add("content");
+
+    const div3 = document.createElement("div");
+    div3.classList.add("imgLog");
+
+    const img1 = document.createElement("img");
+    img1.src = "./icon/Vector (1).svg";
+    img1.alt = "";
+    div3.appendChild(img1);
+
+    const div4 = document.createElement("div");
+    div4.classList.add("img");
+
+    const img2 = document.createElement("img");
+    img2.src = img;
+    img2.alt = "";
+    div4.appendChild(img2);
+
+    const h3 = document.createElement("h3");
+    h3.textContent = name;
+    div4.appendChild(h3);
+
+    const div5 = document.createElement("div");
+    div5.classList.add("text");
+
+    const p1 = document.createElement("p");
+    p1.textContent = "Количество:";
+    div5.appendChild(p1);
+
+    const span1 = document.createElement("span");
+    span1.textContent = cap;
+    div5.appendChild(span1);
+
+    const div6 = document.createElement("div");
+    div6.classList.add("text");
+
+    const p2 = document.createElement("p");
+    p2.textContent = "Уголь:";
+    div6.appendChild(p2);
+
+    const span2 = document.createElement("span");
+    span2.textContent = ugol;
+    div6.appendChild(span2);
+
+    const div7 = document.createElement("div");
+    div7.classList.add("text");
+
+    const div8 = document.createElement("div");
+    div8.classList.add("text");
+
+    const p4 = document.createElement("p");
+    p4.textContent = "Табак:";
+    div8.appendChild(p4);
+
+    const span4 = document.createElement("span");
+    span4.textContent = tabac;
+    div8.appendChild(span4);
+
+    const div9 = document.createElement("div");
+    div9.classList.add("text");
+
+    
+
+    const div10 = document.createElement("div");
+    div10.classList.add("sum");
+
+    const h32 = document.createElement("h3");
+    h32.textContent = prise;
+    div10.appendChild(h32);
+
+    const button = document.createElement("button");
+    button.dataset.id = id
+    button.textContent = "Заказть";
+    button.id = "btnShop"
+    div10.appendChild(button);
+
+    div2.appendChild(div3);
+    div2.appendChild(div4);
+    div2.appendChild(div5);
+    div2.appendChild(div6);
+    div2.appendChild(div7);
+    div2.appendChild(div8);
+    div2.appendChild(div9);
+    div2.appendChild(div10);
+
+    div1.appendChild(div2);
+    cartcriaytdata.append(div1)
+}
+axios.get("https://645d2fb3250a246ae319f640.mockapi.io/cartArr").then(res=>{
+    res.data.forEach((i) => {
+        cartcriayt(i.name,i.tabac,i.cap,i.prise,i.id,i.ugol,i.img)
+    });
+})
+
+let oupenScroll = doc.querySelector(".oupenScroll")
+let comentBoxdata = doc.querySelector(".comentBoxdata")
+function commentcreaytdata(name, comments, star, id) {
+    let arr = ["./icon/User-98-1.png", "./icon/User-98-2.png", "./icon/User-98.png"]
+    let num = Math.floor(Math.random() * 3)
+    const slide = document.createElement("div");
+    slide.dataset.id = id
+    slide.classList.add("swiper-slide");
+    const comment = document.createElement("div");
+    comment.classList.add("myComent");
+    const block1 = document.createElement("div");
+    block1.classList.add("block");
+    const img = document.createElement("div");
+    img.classList.add("img");
+    const imgSrc = document.createElement("img");
+    imgSrc.setAttribute("src", arr[num]);
+    img.appendChild(imgSrc);
+    const text = document.createElement("div");
+    text.classList.add("text");
+    const h4 = document.createElement("h4");
+    h4.textContent = name;
+    text.appendChild(h4);
+
+    const status = document.createElement("div");
+    status.classList.add("status");
+    for (let i = 0; i < 5; i++) {
+        const imgStatus = document.createElement("img");
+        if (i + 1 <= star) {
+            imgStatus.setAttribute("src", "./icon/paginationStatus.png");
+        } else {
+            imgStatus.setAttribute("src", "./icon/paginationStatusActive.png");
+        }
+        status.appendChild(imgStatus);
+    }
+    text.appendChild(status);
+
+    block1.appendChild(img);
+    block1.appendChild(text);
+
+    const block2 = document.createElement("div");
+    block2.classList.add("block");
+
+    const p = document.createElement("p");
+    p.textContent = comments;
+    block2.appendChild(p);
+    comment.appendChild(block1);
+    comment.appendChild(block2);
+    slide.appendChild(comment);
+    comentBoxdata.append(slide)
+}
+
+let masc = document.querySelectorAll("#selector");
 for (let i of masc) {
     let maskOptions = {
-        mask: '+{7} (000) 000-00-00',
+        mask: "+{7} (000) 000-00-00",
         lazy: false,
     };
     let mask = IMask(i, maskOptions);
 }
 
 //AIzaSyC8vwy2tLXxwXz9HVOtVylxeJvw4YWHBbs
-let mtbox = doc.querySelector('.mtbox')
+let mtbox = doc.querySelector(".mtbox")
 
-    , filt = doc.querySelectorAll('#filt')
+    , filt = doc.querySelectorAll("#filt")
 
 filt.forEach((i) => {
     i.onclick = () => {
         filt.forEach(element => {
-            element.classList.remove('active')
+            element.classList.remove("active")
         });
-        i.classList.add('active')
-        if (i.dataset.name == 'чаша') {
-            mtbox.classList.add('filt1')
-            mtbox.classList.remove('filt2')
-            mtbox.classList.remove('filt3')
-        } else if (i.dataset.name == 'табак') {
-            mtbox.classList.add('filt2')
-            mtbox.classList.remove('filt1')
-            mtbox.classList.remove('filt3')
+        i.classList.add("active")
+        if (i.dataset.name == "чаша") {
+            mtbox.classList.add("filt1")
+            mtbox.classList.remove("filt2")
+            mtbox.classList.remove("filt3")
+        } else if (i.dataset.name == "табак") {
+            mtbox.classList.add("filt2")
+            mtbox.classList.remove("filt1")
+            mtbox.classList.remove("filt3")
         } else {
-            mtbox.classList.add('filt3')
-            mtbox.classList.remove('filt2')
-            mtbox.classList.remove('filt1')
+            mtbox.classList.add("filt3")
+            mtbox.classList.remove("filt2")
+            mtbox.classList.remove("filt1")
         }
     }
 
 })
 
-let burger = doc.querySelector('.burger')
-let navigeyt = doc.querySelectorAll('#navigeyt')
-let burgerMenu = doc.querySelector('.burgerMenu')
+let burger = doc.querySelector(".burger")
+let navigeyt = doc.querySelectorAll("#navigeyt")
+let burgerMenu = doc.querySelector(".burgerMenu")
 let menuAct = false
-burger.onclick=()=>{
+burger.onclick = () => {
     if (menuAct == false) {
         menuAct = true
-        burgerMenu.classList.add('activeMenu')
-        burger.src ='./icon/Frame 82 (1).png'
-        doc.body.style.overflow = 'hidden'
+        burgerMenu.classList.add("activeMenu")
+        burger.src = "./icon/Frame 82 (1).png"
+        doc.body.style.overflow = "hidden"
         burgerMenu.style.opacity = 0
         for (let i = 0; i < navigeyt.length; i++) {
-            if (i%2 == 0) {
-                navigeyt[i].dataset.aos = 'fade-right'
-            }else{
+            if (i % 2 == 0) {
+                navigeyt[i].dataset.aos = "fade-right"
+            } else {
 
-                navigeyt[i].dataset.aos = 'fade-left'
+                navigeyt[i].dataset.aos = "fade-left"
             }
         }
-        
+
         setTimeout(() => {
             burgerMenu.style.opacity = 1
-            for(let i of navigeyt){
-                i.dataset.aos = ''
+            for (let i of navigeyt) {
+                i.dataset.aos = ""
             }
         }, 300);
-        
-    }else{
+
+    } else {
         menuAct = false
-        
-        burger.src ='./icon/Frame 82.png'
-        doc.body.style.overflow = 'auto'
+
+        burger.src = "./icon/Frame 82.png"
+        doc.body.style.overflow = "auto"
         burgerMenu.style.opacity = 0
         for (let i = 0; i < navigeyt.length; i++) {
-            if (i%2 == 0) {
-                navigeyt[i].dataset.aos = 'fade-right'
-            }else{
+            if (i % 2 == 0) {
+                navigeyt[i].dataset.aos = "fade-right"
+            } else {
 
-                navigeyt[i].dataset.aos = 'fade-left'
+                navigeyt[i].dataset.aos = "fade-left"
             }
         }
         setTimeout(() => {
             burgerMenu.style.opacity = 1
-            burgerMenu.classList.remove('activeMenu')
+            burgerMenu.classList.remove("activeMenu")
         }, 300);
     }
-    
+
 }
-let bowl = doc.querySelectorAll('#bowl')
-let tobacco = doc.querySelectorAll('#tobacco')
+let bowl = doc.querySelectorAll("#bowl")
+let tobacco = doc.querySelectorAll("#tobacco")
 function filts(btn) {
-    btn.forEach((i)=>{
-        i.onclick=()=>{
-            for(let item of btn){
-                item.classList.remove('grActive')
+    btn.forEach((i) => {
+        i.onclick = () => {
+            for (let item of btn) {
+                item.classList.remove("grActive")
             }
-            i.classList.add('grActive')
+            i.classList.add("grActive")
         }
     })
 }
 filts(bowl)
 filts(tobacco)
+let commentModl = doc.querySelector(".commentModl")
+let comentsForm = doc.querySelector(".comentsForm")
+let commentBlock = doc.querySelector("#commentBlock")
+let close = doc.querySelector(".close")
+comentsForm.onclick = () => {
+    commentModl.classList.add("commentModlActive")
+    doc.body.style.overflow = "hidden"
+    commentModl.style.opacity = 0
+    commentBlock.dataset.aos = "zoom-out-down"
+    setTimeout(() => {
+        commentModl.style.opacity = 1
+
+    }, 300);
+    setTimeout(() => {
+
+        commentBlock.dataset.aos = ""
+    }, 500);
+}
+function creaytdata() {
+    axios.get("https://645d2fb3250a246ae319f640.mockapi.io/smokeArr").then(res => {
+
+        let myArr = res.data
+        for (let i of myArr) {
+            commentcreaytdata(i.userName, i.usreComment, i.star, i.id)
+        }
+    })
+}
+close.onclick = () => {
+
+    doc.body.style.overflow = "auto"
+    commentModl.style.opacity = 0
+    commentBlock.dataset.aos = "zoom-out-up"
+    setTimeout(() => {
+        commentModl.classList.remove("commentModlActive")
+        commentModl.style.opacity = 1
+    }, 300);
+}
+let obj = {
+    userName: "",
+    phone: "",
+    usreComment: "",
+    star: ""
+}
+let dataStars = doc.querySelectorAll("#dataStars")
+let userName = doc.querySelector("#userName")
+let phone = doc.querySelector("#phone")
+let usreComment = doc.querySelector("#usreComment")
+let databas = doc.querySelector("#databas")
+dataStars.forEach((i) => {
+    i.onclick = () => {
+        obj.star = i.dataset.num
+
+    }
+})
+function postdata(obj) {
+    axios.post("https://645d2fb3250a246ae319f640.mockapi.io/smokeArr", obj)
+}
+databas.addEventListener("click", () => {
+    if (userName.value !== "" && phone.value !== "" && usreComment.value !== "" && obj.star !== "") {
+        comentBoxdata.innerHTML = ""
+        obj.userName = userName.value
+        obj.phone = phone.value
+        obj.usreComment = usreComment.value
+        postdata(obj)
+        doc.body.style.overflow = "auto"
+        commentModl.style.opacity = 0
+        commentBlock.dataset.aos = "zoom-out-up"
+        setTimeout(() => {
+            commentModl.classList.remove("commentModlActive")
+            commentModl.style.opacity = 1
+        }, 300);
+    } else {
+        alert("заполните всё пожалуйста")
+    }
+    setTimeout(() => {
+        creaytdata()
+    }, 500);
+
+})
+creaytdata()
+let navegeyt = doc.querySelectorAll("#navegeyt")
+let praiyce = doc.querySelector("#praiyce")
+let com = doc.querySelector("#com"), coma = doc.querySelector("#coma"), yakor = doc.querySelector("#yakor")
+let userCom = doc.querySelector("#userCom"), anchorComment = doc.querySelector("#anchorComment")
+    , questionsAnchor = doc.querySelector("#questionsAnchor")
+let question = doc.querySelector(".question")
+function anchor(btn, cotainer) {
+    btn.onclick = (event) => {
+        event.preventDefault()
+        scroll(0, cotainer.offsetTop - 60)
+
+    }
+}
+anchor(com, praiyce)
+anchor(coma, yakor)
+anchor(userCom, anchorComment)
+anchor(questionsAnchor, question)
+navegeyt.forEach((i) => {
+    i.onclick = (event) => {
+        event.preventDefault()
+        if (i.dataset.names == "Акции") {
+            scroll(0, yakor.offsetTop - 60)
+        } else if (i.dataset.names == "Отзывы") {
+            scroll(0, anchorComment.offsetTop - 60)
+        } else if (i.dataset.names == "Вапросы") {
+            scroll(0, question.offsetTop - 60)
+        } else if (i.dataset.names == "Услуги") {
+            scroll(0, praiyce.offsetTop - 60)
+        }
+        for (let item of navegeyt) {
+            item.classList.remove("active")
+        }
+        i.classList.add("active")
+    }
+})
+let opshen = doc.querySelector("#opshen")
+doc.body.onscroll = () => {
+    const offset = caunt.offsetHeight;
+    const scrollY = window.scrollY;
+
+    if (scrollY >= offset * 3) {
+        oupenScroll.classList.add("oupenScroll1")
+    } else if (scrollY <= offset * 3) {
+        oupenScroll.classList.remove("oupenScroll1")
+    }
+
+    heads.style.opacity = scrollY >= offset * 2 ? 0 : 1;
+
+    for (let i of navegeyt) {
+
+        if (i.dataset.names == "Акции" && scrollY >= yakor.offsetTop - 60) {
+            navegeyt.forEach(item1 => item1.classList.remove("active"));
+            i.classList.add("active");
+        } else if (i.dataset.names == "Отзывы" && scrollY >= anchorComment.offsetTop - 60) {
+            navegeyt.forEach(item1 => item1.classList.remove("active"));
+            i.classList.add("active");
+        } else if (i.dataset.names == "Вапросы" && scrollY >= question.offsetTop - 60) {
+            navegeyt.forEach(item1 => item1.classList.remove("active"));
+            i.classList.add("active");
+        }
+
+    }
+}
+let btnShop = doc.querySelectorAll("#btnShop")
+btnShop.forEach((i)=>{
+    i.onclick=()=>{
+        for(let item of cartsArr) {
+            
+        }
+        
+        console.log("hello",i.dataset.id);
+    }
+})

@@ -21,15 +21,15 @@
       <ul>
         <li><a href="#" class="logo"><img src="./icon/Vector (9).png" alt=""></a></li>
         <li>
-          <a href="" class="active">Услуги</a>
-          <a href="">Акции</a>
-          <a href="">Отзывы</a>
-          <a href="">Блог</a>
-          <a href="">Кейтеринг</a>
+          <a href="" id="navegeyt" data-names="Услуги">Услуги</a>
+          <a href="" id="navegeyt" data-names="Акции">Акции</a>
+          <a href="" id="navegeyt" data-names="Отзывы">Отзывы</a>
+          <a href="" id="navegeyt" data-names="Блог">Сборка кальяна</a>
+          <a href="" id="navegeyt" data-names="Вапросы">Вапросы</a>
         </li>
       </ul>
       <ul>
-        
+
         <li>
           <button>
             <img src="./icon/Vector.svg" alt="">
@@ -42,18 +42,115 @@
         <li><a href="#"><img src="./icon/Vector (9).png" alt=""></a></li>
       </ul>
       <ul>
-        <li ><a href="#"><img src="./icon/Frame 82.png" alt="" class="burger"></a></li>
+        <li><a href="#"><img src="./icon/Frame 82.png" alt="" class="burger"></a></li>
       </ul>
     </nav>
   </header>
   <div class="burgerMenu">
     <div class="box">
-      <div class="elem" id="navigeyt"><p>Услуги</p></div>
-      <div class="elem" id="navigeyt"><p>Акции</p></div>
-      <div class="elem" id="navigeyt"><p>Отзывы</p></div>
-      <div class="elem" id="navigeyt"><p>Блог</p></div>
-      <div class="elem" id="navigeyt"><p>Кейтеринг</p></div>
-      <div class="elem" id="navigeyt"><p>Вопросы</p></div>
+      <div class="elem" id="navigeyt">
+        <p>Услуги</p>
+      </div>
+      <div class="elem" id="navigeyt">
+        <p>Акции</p>
+      </div>
+      <div class="elem" id="navigeyt">
+        <p>Отзывы</p>
+      </div>
+      <div class="elem" id="navigeyt">
+        <p>Сборка кальяна</p>
+      </div>
+      <div class="elem" id="navigeyt">
+        <p>Кейтеринг</p>
+      </div>
+      <div class="elem" id="navigeyt">
+        <p>Вопросы</p>
+      </div>
+    </div>
+  </div>
+  <div class="commentModl">
+    <div class="box">
+      <span class="close">
+        <img src="./icon/Frame 82 (1).png" alt="">
+      </span>
+      <div class="block" id="commentBlock">
+        <div class="elem">
+          <input type="text" placeholder="Имя" id="userName">
+          <input type="text" id="phone">
+          <button id="databas">Отправить</button>
+        </div>
+        <div class="elem">
+          <textarea name="comment" placeholder="Оставьте комментарий" id="usreComment"></textarea>
+          <p>Скольки чашами из пяти вы нас оцените? </p>
+          <div class="star">
+            <img src="./icon/paginationStatusActive.png" id="dataStars" data-num="1" alt="">
+            <img src="./icon/paginationStatusActive.png" id="dataStars" data-num="2" alt="">
+            <img src="./icon/paginationStatusActive.png" id="dataStars" data-num="3" alt="">
+            <img src="./icon/paginationStatusActive.png" id="dataStars" data-num="4" alt="">
+            <img src="./icon/paginationStatusActive.png" id="dataStars" data-num="5" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shopModal">
+    <div class="box">
+      <span id="closes">
+        <img src="./icon/Frame 82 (1).png" alt="">
+      </span>
+      <div class="myadres">
+        <div class="myElement dddd">
+          <input type="text" placeholder="Имя">
+          <input type="text" id="selector">
+          <button>Заказть</button>
+        </div>
+        <div class="myElement">
+          <label for="ch1">
+            <input type="radio" class="ch" name="text" id="ch1">
+            <span></span>
+            Вахитовский район
+          </label>
+          <label for="ch2">
+            <input type="radio" class="ch" name="text" id="ch2">
+            <span></span>
+            Авиастроительный район
+          </label>
+          <label for="ch3">
+            <input type="radio" class="ch" name="text" id="ch3">
+            <span></span>
+            Ново-Савиновский район
+          </label>
+          <label for="ch4">
+            <input type="radio" class="ch" name="text" id="ch4">
+            <span></span>
+            Кировский район
+          </label>
+
+        </div>
+        <div class="myElement">
+          <label for="ch5">
+            <input type="radio" class="ch" name="text" id="ch5">
+            <span></span>
+            Вахитовский район
+          </label>
+          <label for="ch6">
+            <input type="radio" class="ch" name="text" id="ch6">
+            <span></span>
+            Авиастроительный район
+          </label>
+          <label for="ch7">
+            <input type="radio" class="ch" name="text" id="ch7">
+            <span></span>
+            Ново-Савиновский район
+          </label>
+          <label for="ch8">
+            <input type="radio" class="ch" name="text" id="ch8">
+            <span></span>
+            Кировский район
+          </label>
+
+        </div>
+      </div>
     </div>
   </div>
   <main>
@@ -86,32 +183,27 @@
 
               </li>
               <li>
-                <a href="#">
+                <a href="#" id="com">
                   Услуги
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" id="coma">
                   Акции
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="#" id="userCom">
                   Отзывы
                 </a>
               </li>
               <li>
                 <a href="#">
-                  Блог
+                  Сборка кальяна
                 </a>
               </li>
               <li>
-                <a href="#">
-                  Кейтеринг
-                </a>
-              </li>
-              <li>
-                <a href="#">
+                <a href="#" id="questionsAnchor">
                   Вопросы
                 </a>
               </li>
@@ -120,7 +212,7 @@
         </div>
       </div>
     </section>
-    <section class="content">
+    <section class="content" id="yakor">
       <div class="cont">
         <div class="box">
           <div class="block" id="caunt">
@@ -133,7 +225,7 @@
             </div>
             <div class="masseg">
               <a href="#"><img src="./icon/whatsap.svg" alt=""></a>
-              <a href="#"><img src="./icon/instagram.svg" alt=""></a>
+              <a href="https://www.instagram.com/smoke_in_house_kazan/"><img src="./icon/instagram.svg" alt=""></a>
               <a href="#"><img src="./icon/facebook.svg" alt=""></a>
               <a href="#"><img src="./icon/telegram.svg" alt=""></a>
             </div>
@@ -147,7 +239,11 @@
                     <div class="gridElem">
                       <div class="text">
                         <p>
-                          10% cкидка на первый заказ
+                          1 кальян 1 чаша
+                          Уголь 4 шт
+                          Время 2-3 ч
+                          Brusko Musthave Spectrum
+                          1000₽
                         </p>
                       </div>
                       <div class="icon">
@@ -157,8 +253,11 @@
                     <div class="gridElem">
                       <div class="text">
                         <p>
-                          Система лояльности
-                          получай выгоду от 50%
+                          1 кальян 2 чаши
+                          Уголь 8 шт
+                          Время 7- 9 ч
+                          Darksaid Burn Element
+                          1300₽
                         </p>
                       </div>
                       <div class="icon">
@@ -178,7 +277,11 @@
                     <div class="gridElem">
                       <div class="text">
                         <p>
-                          Распродажи на instagram получи чашу в подарок
+                          1 кальян 3 чаши
+                          Уголь 12 шт
+                          Время до завтра , до 14ч
+                          Duft , Daily hookah Black burn
+                          1600₽
                         </p>
                       </div>
                       <div class="icon">
@@ -204,7 +307,7 @@
                       <div class="text">
                         <p>
                           Система лояльности
-                          получай выгоду от 50%
+                          получай выгоду до 50%
                         </p>
                       </div>
                       <div class="icon">
@@ -234,6 +337,7 @@
 
                   </div>
                 </div>
+
               </div>
               <div class="custom">
                 <div class="swiper-button-prev"></div>
@@ -281,6 +385,7 @@
         </div>
       </div>
     </section>
+
     <section class="bowls">
       <div class="cont">
         <div class="box">
@@ -370,7 +475,7 @@
                 </div>
                 <div class="gridElem" id="bowl">
                   <div class="text">
-                    
+
                     <div class="nn">
                       <span>1</span>
                       <div class="number">
@@ -380,7 +485,7 @@
                       </div>
                     </div>
                     <span>Чаша</span>
-                    
+
                   </div>
                   <div class="img">
                     <img src="./icon/image 13.png" alt="">
@@ -497,7 +602,7 @@
               </div>
 
             </div>
-            <div class="opshen">
+            <div class="opshen" id="opshen">
               <p>
                 Показать <br> больше
               </p>
@@ -510,235 +615,14 @@
     </section>
     <section class="praiyce">
       <div class="cont">
-        <div class="box">
+        <div class="box" id="praiyce">
           <h2>
             Готовые кальяны
           </h2>
           <div class="boxSwip">
             <div class="swiper mySwiper2">
-              <div class="swiper-wrapper ">
-                <div class="swiper-slide">
-                  <div class="content">
-                    <div class="imgLog">
-                      <img src="./icon/Vector (1).svg" alt="">
-                    </div>
-                    <div class="img">
-                      <img src="./icon/Rectangle 17.png" alt="">
-                      <h3>L-набор Classic</h3>
-                    </div>
-                    <div class="text">
-                      <p>Количество:</p>
-                      <span>1 кальян 1 чаша</span>
-                    </div>
-                    <div class="text">
-                      <p>Уголь:</p>
-                      <span>4 шт.</span>
-                    </div>
-                    <div class="text">
-                      <p>Время:</p>
-                      <span>2-3 ч.</span>
-                    </div>
-                    <div class="text">
-                      <p>Табак:</p>
-                      <span>Adalya, Brusko, Serbetli, Jam</span>
-                    </div>
-                    <div class="text">
-                      <p>Доп. забивка:</p>
-                      <span>300 р</span>
-                    </div>
-                    <div class="sum">
-                      <h3>200 000 Р.</h3>
-                      <button>
-                        Заказть
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="content">
-                    <div class="imgLog">
-                      <img src="./icon/Vector (1).svg" alt="">
-                    </div>
-                    <div class="img">
-                      <img src="./icon/Rectangle 17.png" alt="">
-                      <h3>L-набор Classic</h3>
-                    </div>
-                    <div class="text">
-                      <p>Количество:</p>
-                      <span>1 кальян 1 чаша</span>
-                    </div>
-                    <div class="text">
-                      <p>Уголь:</p>
-                      <span>4 шт.</span>
-                    </div>
-                    <div class="text">
-                      <p>Время:</p>
-                      <span>2-3 ч.</span>
-                    </div>
-                    <div class="text">
-                      <p>Табак:</p>
-                      <span>Adalya, Brusko, Serbetli, Jam</span>
-                    </div>
-                    <div class="text">
-                      <p>Доп. забивка:</p>
-                      <span>300 р</span>
-                    </div>
-                    <div class="sum">
-                      <h3>200 000 Р.</h3>
-                      <button>
-                        Заказть
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="content">
-                    <div class="imgLog">
-                      <img src="./icon/Vector (1).svg" alt="">
-                    </div>
-                    <div class="img">
-                      <img src="./icon/Rectangle 17.png" alt="">
-                      <h3>L-набор Classic</h3>
-                    </div>
-                    <div class="text">
-                      <p>Количество:</p>
-                      <span>1 кальян 1 чаша</span>
-                    </div>
-                    <div class="text">
-                      <p>Уголь:</p>
-                      <span>4 шт.</span>
-                    </div>
-                    <div class="text">
-                      <p>Время:</p>
-                      <span>2-3 ч.</span>
-                    </div>
-                    <div class="text">
-                      <p>Табак:</p>
-                      <span>Adalya, Brusko, Serbetli, Jam</span>
-                    </div>
-                    <div class="text">
-                      <p>Доп. забивка:</p>
-                      <span>300 р</span>
-                    </div>
-                    <div class="sum">
-                      <h3>200 000 Р.</h3>
-                      <button>
-                        Заказть
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="content">
-                    <div class="imgLog">
-                      <img src="./icon/Vector (1).svg" alt="">
-                    </div>
-                    <div class="img">
-                      <img src="./icon/Rectangle 17.png" alt="">
-                      <h3>L-набор Classic</h3>
-                    </div>
-                    <div class="text">
-                      <p>Количество:</p>
-                      <span>1 кальян 1 чаша</span>
-                    </div>
-                    <div class="text">
-                      <p>Уголь:</p>
-                      <span>4 шт.</span>
-                    </div>
-                    <div class="text">
-                      <p>Время:</p>
-                      <span>2-3 ч.</span>
-                    </div>
-                    <div class="text">
-                      <p>Табак:</p>
-                      <span>Adalya, Brusko, Serbetli, Jam</span>
-                    </div>
-                    <div class="text">
-                      <p>Доп. забивка:</p>
-                      <span>300 р</span>
-                    </div>
-                    <div class="sum">
-                      <h3>200 000 Р.</h3>
-                      <button>
-                        Заказть
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="content">
-                    <div class="imgLog">
-                      <img src="./icon/Vector (1).svg" alt="">
-                    </div>
-                    <div class="img">
-                      <img src="./icon/Rectangle 17.png" alt="">
-                      <h3>L-набор Classic</h3>
-                    </div>
-                    <div class="text">
-                      <p>Количество:</p>
-                      <span>1 кальян 1 чаша</span>
-                    </div>
-                    <div class="text">
-                      <p>Уголь:</p>
-                      <span>4 шт.</span>
-                    </div>
-                    <div class="text">
-                      <p>Время:</p>
-                      <span>2-3 ч.</span>
-                    </div>
-                    <div class="text">
-                      <p>Табак:</p>
-                      <span>Adalya, Brusko, Serbetli, Jam</span>
-                    </div>
-                    <div class="text">
-                      <p>Доп. забивка:</p>
-                      <span>300 р</span>
-                    </div>
-                    <div class="sum">
-                      <h3>200 000 Р.</h3>
-                      <button>
-                        Заказть
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="content">
-                    <div class="imgLog">
-                      <img src="./icon/Vector (1).svg" alt="">
-                    </div>
-                    <div class="img">
-                      <img src="./icon/Rectangle 17.png" alt="">
-                      <h3>L-набор Classic</h3>
-                    </div>
-                    <div class="text">
-                      <p>Количество:</p>
-                      <span>1 кальян 1 чаша</span>
-                    </div>
-                    <div class="text">
-                      <p>Уголь:</p>
-                      <span>4 шт.</span>
-                    </div>
-                    <div class="text">
-                      <p>Время:</p>
-                      <span>2-3 ч.</span>
-                    </div>
-                    <div class="text">
-                      <p>Табак:</p>
-                      <span>Adalya, Brusko, Serbetli, Jam</span>
-                    </div>
-                    <div class="text">
-                      <p>Доп. забивка:</p>
-                      <span>300 р</span>
-                    </div>
-                    <div class="sum">
-                      <h3>200 000 Р.</h3>
-                      <button>
-                        Заказть
-                      </button>
-                    </div>
-                  </div>
-                </div>
+              <div class="swiper-wrapper " id="cartcriaytdata">
+
               </div>
               <div class="custom">
                 <div class="swiper-button-prev"></div>
@@ -750,181 +634,19 @@
         </div>
       </div>
     </section>
-    <section class="coments">
+    <section class="coments" id="anchorComment">
       <div class="cont">
-
         <div class="box">
           <div class="comentText">
             <h2>
               Отзывы
             </h2>
-            <button>Оставить отзыв</button>
+            <button class="comentsForm">Оставить отзыв</button>
           </div>
           <div class="thisComent">
             <div class="swiper mySwiper3">
-              <div class="swiper-wrapper ">
-                <div class="swiper-slide">
-                  <div class="myComent">
-                    <div class="block">
-                      <div class="img">
-                        <img src="./icon/User-98-1.png" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>
-                          Jenny Wilson
-                        </h4>
-                        <div class="status">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <p>
-                        Банальные, но неопровержимые выводы, а также элементы политического процесса, вне зависимости от
-                        их
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="myComent">
-                    <div class="block">
-                      <div class="img">
-                        <img src="./icon/User-98-2.png" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>
-                          Jenny Wilson
-                        </h4>
-                        <div class="status">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <p>
-                        Банальные, но неопровержимые выводы, а также элементы политического процесса, вне зависимости от
-                        их
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="myComent">
-                    <div class="block">
-                      <div class="img">
-                        <img src="./icon/User-98.png" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>
-                          Jenny Wilson
-                        </h4>
-                        <div class="status">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <p>
-                        Банальные, но неопровержимые выводы, а также элементы политического процесса, вне зависимости от
-                        их
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="myComent">
-                    <div class="block">
-                      <div class="img">
-                        <img src="./icon/User-98-1.png" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>
-                          Jenny Wilson
-                        </h4>
-                        <div class="status">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <p>
-                        Банальные, но неопровержимые выводы, а также элементы политического процесса, вне зависимости от
-                        их
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="myComent">
-                    <div class="block">
-                      <div class="img">
-                        <img src="./icon/User-98-2.png" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>
-                          Jenny Wilson
-                        </h4>
-                        <div class="status">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <p>
-                        Банальные, но неопровержимые выводы, а также элементы политического процесса, вне зависимости от
-                        их
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="myComent">
-                    <div class="block">
-                      <div class="img">
-                        <img src="./icon/User-98.png" alt="">
-                      </div>
-                      <div class="text">
-                        <h4>
-                          Jenny Wilson
-                        </h4>
-                        <div class="status">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                          <img src="./icon/paginationStatusActive.png" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="block">
-                      <p>
-                        Банальные, но неопровержимые выводы, а также элементы политического процесса, вне зависимости от
-                        их
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div class="swiper-wrapper comentBoxdata">
+
               </div>
               <div class="custom">
                 <div class="swiper-button-prev"></div>
@@ -1045,12 +767,13 @@
             <a href=""><img src="./icon/facebook.svg" alt=""></a>
             <a href=""><img src="./icon/telegram.svg" alt=""></a>
           </div>
-          <p>+7 (999) 999-99-99</p>
-          <p>+7 (999) 999-99-99</p>
+          <p>+8 (961) 953-34-13</p>
         </div>
       </div>
     </div>
   </footer>
+  Events
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8vwy2tLXxwXz9HVOtVylxeJvw4YWHBbs&callback=initMap">
     </script>
@@ -1144,9 +867,9 @@
 
     function initMap() {
 
-      const uluru = { lat: 55.7869338, lng: 49.1101183 };
+      const uluru = { lat: 55.8200691, lng: 49.1422454 };
       let maps = document.querySelector('#map')
-      console.log(maps);
+
       const map = new google.maps.Map(maps, {
         zoom: 11,
         center: uluru,

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.3s;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -101,6 +102,7 @@ header .oupen {
   justify-content: center;
   align-items: center;
   display: none;
+  transition: 1s;
 }
 .burgerMenu .box {
   width: 100%;
@@ -117,6 +119,7 @@ header .oupen {
   align-items: center;
   margin-bottom: 20px;
   cursor: pointer;
+  transition: all 2s !important;
 }
 .burgerMenu .box .elem p {
   font-weight: 600;
@@ -132,6 +135,266 @@ header .oupen {
 }
 
 .activeMenu {
+  display: flex;
+}
+
+.shopModal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.5960784314);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  transition: 1s;
+}
+.shopModal .box {
+  width: 70%;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  position: relative;
+}
+.shopModal .box #closes {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.shopModal .box .myadres {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.shopModal .box .myadres .myElement {
+  color: #fff;
+}
+.shopModal .box .myadres .myElement:nth-child(1) {
+  padding: 10px;
+}
+.shopModal .box .myadres .myElement:nth-child(1) input {
+  width: 100%;
+  padding: 24px;
+  color: #fff;
+  height: 56px;
+  background-color: transparent;
+  outline-color: #74E2C7;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+}
+.shopModal .box .myadres .myElement:nth-child(1) button {
+  width: 100%;
+  background-color: #74E2C7;
+  border: 0;
+  height: 56px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.shopModal .box .myadres .myElement:nth-child(1) button:hover {
+  background: #C8FFF1;
+}
+.shopModal .box .myadres .myElement:nth-child(1) button:active {
+  background: #468C7B;
+}
+.shopModal .box .myadres .myElement:nth-child(3) label {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 33px;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.shopModal .box .myadres .myElement:nth-child(3) label input {
+  display: none;
+}
+.shopModal .box .myadres .myElement:nth-child(3) label span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FFFFFF;
+}
+.shopModal .box .myadres .myElement:nth-child(3) label span::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #468C7B;
+  border-radius: 50%;
+  opacity: 0;
+}
+.shopModal .box .myadres .myElement:nth-child(3) label .ch:checked + span::after {
+  opacity: 1;
+}
+.shopModal .box .myadres .myElement:nth-child(2) label {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 33px;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.shopModal .box .myadres .myElement:nth-child(2) label input {
+  display: none;
+}
+.shopModal .box .myadres .myElement:nth-child(2) label span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #FFFFFF;
+}
+.shopModal .box .myadres .myElement:nth-child(2) label span::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #468C7B;
+  border-radius: 50%;
+  opacity: 0;
+}
+.shopModal .box .myadres .myElement:nth-child(2) label .ch:checked + span::after {
+  opacity: 1;
+}
+
+.shopModalActive {
+  display: flex;
+}
+
+.commentModl {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background-color: rgba(0, 0, 0, 0.5960784314);
+  z-index: 20;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  transition: 0.5s;
+}
+.commentModl .box {
+  padding: 0 115px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #74E2C7;
+  border-radius: 5px;
+  position: relative;
+  background-color: #121212;
+}
+.commentModl .box .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.commentModl .box .block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+.commentModl .box .block .elem {
+  width: 50%;
+}
+.commentModl .box .block .elem input {
+  width: 100%;
+  height: 69px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-bottom: 20px;
+  padding: 20px;
+  outline-color: #74E2C7;
+  color: #fff;
+}
+.commentModl .box .block .elem button {
+  width: 100%;
+  height: 69px;
+  background: #74E2C7;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.commentModl .box .block .elem button:hover {
+  background-color: #C8FFF1;
+}
+.commentModl .box .block .elem button:active {
+  background-color: #468C7B;
+}
+.commentModl .box .block .elem textarea {
+  max-width: 100%;
+  width: 100%;
+  max-height: 158px;
+  height: 158px;
+  background-color: transparent;
+  padding: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 130%;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.commentModl .box .block .elem p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  opacity: 0.6;
+}
+.commentModl .box .block .elem .star {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin-top: 11px;
+  gap: 20px;
+}
+
+.commentModlActive {
   display: flex;
 }
 
@@ -531,6 +794,8 @@ main .bowls .box .scrolBox .mtbox .gridFil .gridElem p:nth-child(1) {
   margin-bottom: 14px;
 }
 main .bowls .box .scrolBox .mtbox .gridFil .gridElem .nn {
+  z-index: 10;
+  position: relative;
   display: flex;
   justify-content: start;
   align-items: center;

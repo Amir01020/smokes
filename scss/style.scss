@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s;
-
+    scroll-behavior: smooth;
 }
 
 @mixin flex($a, $b, $c) {
@@ -118,6 +118,7 @@ header {
     @include flex(flex, center, center);
     display: none;
     transition: 1s;
+
     .box {
         width: 100%;
         padding: 30px;
@@ -143,17 +144,291 @@ header {
 
             &:hover {
                 background-color: #74E2C7;
-                p{
+
+                p {
                     color: #000;
                 }
             }
         }
     }
 }
-.activeMenu{
+
+.activeMenu {
     display: flex;
 }
+.shopModal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(40px);
+    background-color: #00000098;
+    z-index: 20;
+    @include flex(flex, center, center);
+    display: none;
+    transition: 1s;
+    .box{
+        width: 70%;
+        
+        border-radius: 20px;
+        padding: 50px;
+        @include flex(flex, center, center);
+        background-color: #000;
+        position: relative;
+        #closes{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+        }
+        .myadres {
+            width: 100%;
+            height: 100%;
+            padding: 50px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            
 
+
+            .myElement {
+                color: #fff;
+
+                &:nth-child(1) {
+                    padding: 10px;
+
+                    input {
+                        width: 100%;
+                        padding: 24px;
+                        color: #fff;
+                        height: 56px;
+                        background-color: transparent;
+                        outline-color: #74E2C7;
+                        border: 1px solid #fff;
+                        border-radius: 5px;
+                        margin-bottom: 24px;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 130%;
+                    }
+
+                    button {
+                        width: 100%;
+                        background-color: #74E2C7;
+                        border: 0;
+                        height: 56px;
+                        border-radius: 5px;
+                        color: #000;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 30px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #C8FFF1;
+                        }
+
+                        &:active {
+                            background: #468C7B;
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    label {
+                        @include flex(flex, start, center);
+                        margin-bottom: 33px;
+                        gap: 10px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        cursor: pointer;
+
+                        input {
+                            display: none;
+
+                        }
+
+                        span {
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            opacity: 0.6;
+                            @include flex(flex, center, center);
+                            border: 1px solid #FFFFFF;
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                background-color: #468C7B;
+                                border-radius: 50%;
+                                opacity: 0;
+
+                            }
+                        }
+
+                        .ch:checked+span::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    label {
+                        @include flex(flex, start, center);
+                        margin-bottom: 33px;
+                        gap: 10px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        cursor: pointer;
+
+                        input {
+                            display: none;
+
+                        }
+
+                        span {
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            opacity: 0.6;
+                            @include flex(flex, center, center);
+                            border: 1px solid #FFFFFF;
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                background-color: #468C7B;
+                                border-radius: 50%;
+                                opacity: 0;
+
+                            }
+                        }
+
+                        .ch:checked+span::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+.shopModalActive{
+    display: flex;
+}
+.commentModl {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(40px);
+    background-color: #00000098;
+    z-index: 20;
+    padding: 10px;
+    @include flex(flex, center, center);
+    display: none;
+    transition: 0.5s;
+
+    .box {
+        padding: 0 115px;
+        width: 80%;
+        height: 80%;
+        @include flex(flex, center, center);
+        border: 1px solid #74E2C7;
+        border-radius: 5px;
+        position: relative;
+        background-color: #121212;
+        .close{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+        }
+
+        .block {
+            width: 100%;
+            @include flex(flex, center, start);
+            gap: 20px;
+
+            .elem {
+                width: 50%;
+
+                input {
+                    width: 100%;
+                    height: 69px;
+                    border: 1px solid #D9D9D9;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    margin-bottom: 20px;
+                    padding: 20px;
+                    outline-color: #74E2C7;
+                    color: #fff;
+                }
+
+                button {
+                    width: 100%;
+                    height: 69px;
+                    background: #74E2C7;
+                    border-radius: 5px;
+                    color: #000;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 30px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #C8FFF1;
+                    }
+
+                    &:active {
+                        background-color: #468C7B;
+                    }
+                }
+
+                textarea {
+                    max-width: 100%;
+                    width: 100%;
+                    max-height: 158px;
+                    height: 158px;
+                    background-color: transparent;
+                    padding: 20px;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 130%;
+                    border: 1px solid #D9D9D9;
+                    border-radius: 5px;
+                    margin-bottom: 24px;
+                    color: #fff;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #fff;
+                    opacity: 0.6;
+                }
+                .star{
+                    @include flex(flex, start, start);
+                    margin-top: 11px;
+                    gap: 20px;
+                }
+            }
+
+        }
+    }
+}
+.commentModlActive{
+    display: flex;
+}
 main {
     .head {
         background-image: url(../icon/image\ 5.png);
@@ -655,7 +930,8 @@ main {
                                     color: #FFFFFF !important;
                                     opacity: 0.2;
                                 }
-
+                                z-index: 10;
+                                position: relative;
                                 @include flex(flex, start, center);
                                 gap: 20px;
 
