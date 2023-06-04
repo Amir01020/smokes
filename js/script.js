@@ -540,7 +540,9 @@ function anchor(btn, cotainer) {
     }
 }
 let myquestion = doc.querySelector('#myquestion')
+let fffffffff = doc.querySelector('#fffffffff')
 anchor(com, praiyce)
+anchor(fffffffff, praiyce)
 anchor(coma, yakor)
 anchor(userCom, anchorComment)
 anchor(questionsAnchor, question)
