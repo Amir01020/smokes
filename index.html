@@ -48,22 +48,19 @@
   </header>
   <div class="burgerMenu">
     <div class="box">
-      <div class="elem" id="navigeyt">
+      <div class="elem navigeyt" id="navegeyt" data-names="Услуги">
         <p>Услуги</p>
       </div>
-      <div class="elem" id="navigeyt">
+      <div class="elem navigeyt" id="navegeyt" data-names="Акции">
         <p>Акции</p>
       </div>
-      <div class="elem" id="navigeyt">
+      <div class="elem navigeyt" id="navegeyt" data-names="Отзывы">
         <p>Отзывы</p>
       </div>
-      <div class="elem" id="navigeyt">
+      <div class="elem navigeyt" id="navegeyt" data-names="Блог">
         <p>Сборка кальяна</p>
       </div>
-      <div class="elem" id="navigeyt">
-        <p>Кейтеринг</p>
-      </div>
-      <div class="elem" id="navigeyt">
+      <div class="elem navigeyt" id="navegeyt" data-names="Вапросы">
         <p>Вопросы</p>
       </div>
     </div>
@@ -99,52 +96,52 @@
         <img src="./icon/Frame 82 (1).png" alt="">
       </span>
       <div class="myadres">
-        <div class="myElement dddd">
-          <input type="text" placeholder="Имя">
-          <input type="text" id="selector">
-          <button>Заказть</button>
+        <div class="myElement">
+          <input type="text" placeholder="Имя" class="postShops">
+          <input type="text" id="selector" class="postShops1">
+          <button class="btnPostGmail">Заказть</button>
         </div>
         <div class="myElement">
-          <label for="ch1">
-            <input type="radio" class="ch" name="text" id="ch1">
+          <label for="h1">
+            <input type="radio" class="ch shopsPost" data-sity="Вахитовский район" name="text" id="h1">
             <span></span>
             Вахитовский район
           </label>
-          <label for="ch2">
-            <input type="radio" class="ch" name="text" id="ch2">
+          <label for="h2">
+            <input type="radio" class="ch shopsPost" data-sity="Авиастроительный район" name="text" id="h2">
             <span></span>
             Авиастроительный район
           </label>
-          <label for="ch3">
-            <input type="radio" class="ch" name="text" id="ch3">
+          <label for="h3">
+            <input type="radio" class="ch shopsPost" data-sity="Ново-Савиновский район" name="text" id="h3">
             <span></span>
             Ново-Савиновский район
           </label>
-          <label for="ch4">
-            <input type="radio" class="ch" name="text" id="ch4">
+          <label for="h4">
+            <input type="radio" class="ch shopsPost" data-sity="Кировский район" name="text" id="h4">
             <span></span>
             Кировский район
           </label>
 
         </div>
         <div class="myElement">
-          <label for="ch5">
-            <input type="radio" class="ch" name="text" id="ch5">
+          <label for="h5">
+            <input type="radio" class="ch shopsPost" data-sity="Вахитовский район" name="text" id="h5">
             <span></span>
             Вахитовский район
           </label>
-          <label for="ch6">
-            <input type="radio" class="ch" name="text" id="ch6">
+          <label for="h6">
+            <input type="radio" class="ch shopsPost" data-sity="Авиастроительный район" name="text" id="h6">
             <span></span>
             Авиастроительный район
           </label>
-          <label for="ch7">
-            <input type="radio" class="ch" name="text" id="ch7">
+          <label for="h7">
+            <input type="radio" class="ch shopsPost" data-sity="Ново-Савиновский район" name="text" id="h7">
             <span></span>
             Ново-Савиновский район
           </label>
-          <label for="ch8">
-            <input type="radio" class="ch" name="text" id="ch8">
+          <label for="h8">
+            <input type="radio" class="ch shopsPost" data-sity="Кировский район" name="text" id="h8">
             <span></span>
             Кировский район
           </label>
@@ -386,7 +383,7 @@
       </div>
     </section>
 
-    <section class="bowls">
+    <section class="bowls" id="myquestion">
       <div class="cont">
         <div class="box">
           <h2>Собери свой кальян</h2>
@@ -403,8 +400,8 @@
           </div>
           <div class="scrolBox">
             <div class="mtbox" data-name="sssss">
-              <div class="gridFil">
-                <div class="gridElem grActive" id="bowl">
+              <div class="gridFil" id="gridFil">
+                <div class="gridElem grActive" data-number="1" id="bowl">
                   <div class="text">
                     <p>1 <br>
 
@@ -418,7 +415,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem" id="bowl">
+                <div class="gridElem" id="bowl" data-number="2">
                   <div class="text">
                     <p>2
                       <br> Чаша
@@ -432,7 +429,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem" id="bowl">
+                <div class="gridElem" id="bowl" data-number="3">
                   <div class="text">
                     <p>3
                       <br> Чаша
@@ -446,7 +443,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem" id="bowl">
+                <div class="gridElem" id="bowl" data-number="4">
                   <div class="text">
                     <p>4
                       <br> Чаша
@@ -460,7 +457,7 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem" id="bowl">
+                <div class="gridElem" id="bowl" data-number="false">
                   <div class="text ">
                     <p class="fresh">Фруктовая<br>
                       чаша</p>
@@ -473,15 +470,15 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem" id="bowl">
+                <div class="gridElem" id="bowl" data-number="">
                   <div class="text">
 
                     <div class="nn">
-                      <span>1</span>
+                      <span class="numberCaunt">1</span>
                       <div class="number">
-                        <img src="./icon/стрелка.png" alt="">
+                        <img src="./icon/стрелка.png" alt="" class="arove" data-id="+">
                         <hr>
-                        <img src="./icon/стрелка.png" alt="">
+                        <img src="./icon/стрелка.png" alt="" class="arove" data-id="-">
                       </div>
                     </div>
                     <span>Чаша</span>
@@ -496,8 +493,8 @@
                   </div>
                 </div>
               </div>
-              <div class="gridFil">
-                <div class="gridElem grActive" id="tobacco">
+              <div class="gridFil" id="gridFil">
+                <div class="gridElem grActive" id="tobacco" data-tabak="easy">
                   <div class="text">
                     <p>Легкий</p>
                   </div>
@@ -509,9 +506,9 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem " id="tobacco">
+                <div class="gridElem " id="tobacco" data-tabak="average">
                   <div class="text">
-                    <p>Легкий <br> премиум</p>
+                    <p>Средний</p>
                   </div>
                   <div class="img">
                     <img src="./icon/image 21.png" alt="">
@@ -521,9 +518,9 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem " id="tobacco">
+                <div class="gridElem " id="tobacco" data-tabak="strong">
                   <div class="text">
-                    <p>Легкий <br> премиум</p>
+                    <p>Крепкий </p>
                   </div>
                   <div class="img">
                     <img src="./icon/image 25.png" alt="">
@@ -533,44 +530,33 @@
                     <div class="el"></div>
                   </div>
                 </div>
-                <div class="gridElem " id="tobacco">
-                  <div class="text">
-                    <p>Легкий <br> премиум</p>
-                  </div>
-                  <div class="img">
-                    <img src="./icon/image 23.png" alt="">
-                  </div>
-                  <div class="cheked">
-                    <input type="radio" name="chek">
-                    <div class="el"></div>
-                  </div>
-                </div>
+
 
               </div>
               <div class="myadres">
                 <div class="myElement dddd">
-                  <input type="text" placeholder="Имя">
-                  <input type="text" id="selector">
-                  <button>Заказть</button>
+                  <input type="text" placeholder="Имя" class="userNameShops">
+                  <input type="text" id="selector" class="userPhoneShop">
+                  <button id="userShop">Заказть</button>
                 </div>
                 <div class="myElement">
                   <label for="ch1">
-                    <input type="radio" class="ch" name="text" id="ch1">
+                    <input type="radio" class="ch sity" data-sity="Вахитовский район" name="text" id="ch1">
                     <span></span>
                     Вахитовский район
                   </label>
                   <label for="ch2">
-                    <input type="radio" class="ch" name="text" id="ch2">
+                    <input type="radio" class="ch sity" data-sity="Авиастроительный район" name="text" id="ch2">
                     <span></span>
                     Авиастроительный район
                   </label>
                   <label for="ch3">
-                    <input type="radio" class="ch" name="text" id="ch3">
+                    <input type="radio" class="ch sity" data-sity="Ново-Савиновский район" name="text" id="ch3">
                     <span></span>
                     Ново-Савиновский район
                   </label>
                   <label for="ch4">
-                    <input type="radio" class="ch" name="text" id="ch4">
+                    <input type="radio" class="ch sity" data-sity="Кировский район" name="text" id="ch4">
                     <span></span>
                     Кировский район
                   </label>
@@ -578,22 +564,22 @@
                 </div>
                 <div class="myElement">
                   <label for="ch5">
-                    <input type="radio" class="ch" name="text" id="ch5">
+                    <input type="radio" class="ch sity" data-sity="Вахитовский район" name="text" id="ch5">
                     <span></span>
                     Вахитовский район
                   </label>
                   <label for="ch6">
-                    <input type="radio" class="ch" name="text" id="ch6">
+                    <input type="radio" class="ch sity" data-sity="Авиастроительный район" name="text" id="ch6">
                     <span></span>
                     Авиастроительный район
                   </label>
                   <label for="ch7">
-                    <input type="radio" class="ch" name="text" id="ch7">
+                    <input type="radio" class="ch sity" data-sity="Ново-Савиновский район" name="text" id="ch7">
                     <span></span>
                     Ново-Савиновский район
                   </label>
                   <label for="ch8">
-                    <input type="radio" class="ch" name="text" id="ch8">
+                    <input type="radio" class="ch sity" data-sity="Кировский район" name="text" id="ch8">
                     <span></span>
                     Кировский район
                   </label>
@@ -602,8 +588,8 @@
               </div>
 
             </div>
-            <div class="opshen" id="opshen">
-              <p>
+            <div class="opshen">
+              <p id="opshen">
                 Показать <br> больше
               </p>
             </div>
@@ -771,8 +757,27 @@
         </div>
       </div>
     </div>
+
+    <div class="reclam">
+      
+      <div class="elem">
+        <p>© 2023 Все права защищены</p>
+      </div>
+      <div class="elem">
+        <div class="block">
+          <p>Created by:</p>
+        </div>
+        <div class="block">
+          <a href="https://lcode.uz/ru/">
+            <img src="./icon/Frame 4.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+
   </footer>
-  Events
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8vwy2tLXxwXz9HVOtVylxeJvw4YWHBbs&callback=initMap">

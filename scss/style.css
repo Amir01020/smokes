@@ -311,7 +311,7 @@ header .oupen {
 .commentModl .box {
   padding: 0 115px;
   width: 80%;
-  height: 80%;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1305,7 +1305,6 @@ main .question .box .flexBlock .elem:nth-child(2) .pass {
 footer {
   border: 1px solid #74E2C7;
   border-radius: 60px 60px 0px 0px;
-  border-bottom: 0;
   margin-top: 94px;
 }
 footer .box {
@@ -1457,6 +1456,25 @@ footer .box .elem:nth-child(3) p {
   color: #FFFFFF;
   opacity: 0.6;
 }
+footer .reclam {
+  border-top: 1px solid #74E2C7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+footer .reclam .elem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+footer .reclam p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
 
 .swiper-pagination .swiper-pagination-bullet {
   width: 21px;
@@ -1582,17 +1600,34 @@ footer .box .elem:nth-child(3) p {
   .opshen {
     display: flex !important;
   }
+  .shopModal {
+    padding-top: 65px;
+    overflow-y: auto;
+    align-items: start;
+  }
+  .shopModal .box {
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .shopModal .box .myadres {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .gridFilActive {
     grid-template-rows: repeat(2, 223px) !important;
   }
   .gridFilActive .gridElem {
-    display: block !important;
+    display: flex !important;
   }
   .gridFilActive .gridElem:nth-child(1) {
-    display: block !important;
+    display: flex !important;
   }
   .gridFilActive .gridElem:nth-child(2) {
-    display: block !important;
+    display: flex !important;
+  }
+  .gridFilActive #bowl span {
+    font-weight: 700 !important;
+    font-size: 48px !important;
+    line-height: 100% !important;
   }
 }
 @media (max-width: 963px) {
@@ -1631,6 +1666,16 @@ footer .box .elem:nth-child(3) p {
   }
   header .oupen ul li a {
     opacity: 1;
+  }
+  .commentModl .box {
+    transform: translateY(1%);
+    padding: 65px;
+  }
+  .commentModl .box .block {
+    flex-wrap: wrap;
+  }
+  .commentModl .box .block .elem {
+    width: 100%;
   }
   .scrolBox .mtbox .myadres {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1700,6 +1745,19 @@ footer .box .elem:nth-child(3) p {
   }
   section.content .box .blockPhone {
     display: block;
+  }
+  .shopModal {
+    padding-top: 65px;
+    overflow-y: auto;
+    align-items: start;
+  }
+  .shopModal .box {
+    padding: 20px;
+    overflow-y: auto;
+    width: 90%;
+  }
+  .shopModal .box .myadres {
+    grid-template-columns: repeat(1, 1fr);
   }
   .scrolBox .mtbox .myadres {
     grid-template-columns: 1fr !important;

@@ -148,13 +148,21 @@ let caunt = doc.querySelector("#caunt")
 //         img: "./icon/Rectangle 17.png",
 //     },
 // ]
-let arrTabac = {
-    "easy":["Spectrum","Daily hookah","endorphin","Fumari","Element"],
-    "average":["sebero","Musthave","Darkside shot","Black Burn","Peter Ralf","Chabacco","Brusko","Duft","Северный ветер","Darkside shot"],
-    "strong":["Black Burn","Darkside","Bonche","Peter Ralf"]
-}
-let cartcriaytdata=doc.querySelector("#cartcriaytdata")
-function cartcriayt(name,tabac,cap,prise,id,ugol,img) {
+let arrTabac = [
+    {
+        "arr": ["Spectrum", "Daily hookah", "endorphin", "Fumari", "Element"],
+        "id": "easy"
+    }, {
+        "arr": ["sebero", "Musthave", "Darkside shot", "Black Burn", "Peter Ralf", "Chabacco", "Brusko", "Duft", "Северный ветер", "Darkside shot"],
+        "id": "average"
+    }, {
+        "arr": ["Black Burn", "Darkside", "Bonche", "Peter Ralf"],
+        "id": "strong"
+    },
+
+]
+let cartcriaytdata = doc.querySelector("#cartcriaytdata")
+function cartcriayt(name, tabac, cap, prise, id, ugol, img) {
     const div1 = document.createElement("div");
     div1.classList.add("swiper-slide");
 
@@ -220,7 +228,7 @@ function cartcriayt(name,tabac,cap,prise,id,ugol,img) {
     const div9 = document.createElement("div");
     div9.classList.add("text");
 
-    
+
 
     const div10 = document.createElement("div");
     div10.classList.add("sum");
@@ -247,11 +255,7 @@ function cartcriayt(name,tabac,cap,prise,id,ugol,img) {
     div1.appendChild(div2);
     cartcriaytdata.append(div1)
 }
-axios.get("https://645d2fb3250a246ae319f640.mockapi.io/cartArr").then(res=>{
-    res.data.forEach((i) => {
-        cartcriayt(i.name,i.tabac,i.cap,i.prise,i.id,i.ugol,i.img)
-    });
-})
+
 
 let oupenScroll = doc.querySelector(".oupenScroll")
 let comentBoxdata = doc.querySelector(".comentBoxdata")
@@ -342,10 +346,11 @@ filt.forEach((i) => {
 })
 
 let burger = doc.querySelector(".burger")
-let navigeyt = doc.querySelectorAll("#navigeyt")
+let navigeyt = doc.querySelectorAll(".navigeyt")
 let burgerMenu = doc.querySelector(".burgerMenu")
 let menuAct = false
-burger.onclick = () => {
+burger.onclick = (event) => {
+    event.preventDefault()
     if (menuAct == false) {
         menuAct = true
         burgerMenu.classList.add("activeMenu")
@@ -389,20 +394,58 @@ burger.onclick = () => {
     }
 
 }
+let postObj = {
+    cap: '',
+    tabak: '',
+    userName: '',
+    siti: '',
+    phone: ''
+}
 let bowl = doc.querySelectorAll("#bowl")
 let tobacco = doc.querySelectorAll("#tobacco")
-function filts(btn) {
-    btn.forEach((i) => {
-        i.onclick = () => {
-            for (let item of btn) {
-                item.classList.remove("grActive")
-            }
-            i.classList.add("grActive")
+
+bowl.forEach((i) => {
+    i.onclick = () => {
+        for (let item of bowl) {
+            item.classList.remove("grActive")
+        }
+        i.classList.add("grActive")
+
+        postObj.cap = i.dataset.number
+        if (i.dataset.number == 'false') {
+            postObj.cap = 'фруктовая чаша'
+        }
+
+
+    }
+})
+tobacco.forEach((i) => {
+    i.onclick = () => {
+        for (let item of tobacco) {
+            item.classList.remove("grActive")
+        }
+        i.classList.add("grActive")
+        postObj.tabak = i.dataset.tabak
+    }
+})
+let userNameShops = doc.querySelector('.userNameShops')
+let userPhoneShop = doc.querySelector('.userPhoneShop')
+let sity = doc.querySelectorAll('.sity')
+let userShop = doc.querySelector('#userShop')
+
+//POST gmail//////////////////////////////////////////////////////////////////////
+let btnPostGmail = doc.querySelector('.btnPostGmail')
+userShop.onclick = () => {
+    sity.forEach((i) => {
+        if (userPhoneShop.value !== '' && userPhoneShop.value !== '' && i.checked == true) {
+            
+            postObj.phone = userPhoneShop.value
+            postObj.userName = userNameShops.value
+            postObj.siti = i.dataset.sity
+            console.log(postObj);
         }
     })
 }
-filts(bowl)
-filts(tobacco)
 let commentModl = doc.querySelector(".commentModl")
 let comentsForm = doc.querySelector(".comentsForm")
 let commentBlock = doc.querySelector("#commentBlock")
@@ -496,6 +539,7 @@ function anchor(btn, cotainer) {
 
     }
 }
+let myquestion = doc.querySelector('#myquestion')
 anchor(com, praiyce)
 anchor(coma, yakor)
 anchor(userCom, anchorComment)
@@ -503,22 +547,70 @@ anchor(questionsAnchor, question)
 navegeyt.forEach((i) => {
     i.onclick = (event) => {
         event.preventDefault()
+
         if (i.dataset.names == "Акции") {
             scroll(0, yakor.offsetTop - 60)
+
         } else if (i.dataset.names == "Отзывы") {
             scroll(0, anchorComment.offsetTop - 60)
+
         } else if (i.dataset.names == "Вапросы") {
             scroll(0, question.offsetTop - 60)
+
         } else if (i.dataset.names == "Услуги") {
             scroll(0, praiyce.offsetTop - 60)
+
+        } else if (i.dataset.names == "Блог") {
+            scroll(0, myquestion.offsetTop - 60)
+
         }
         for (let item of navegeyt) {
             item.classList.remove("active")
         }
         i.classList.add("active")
+        menuAct = false
+
+        burger.src = "./icon/Frame 82.png"
+        doc.body.style.overflow = "auto"
+        burgerMenu.style.opacity = 0
+        for (let i = 0; i < navigeyt.length; i++) {
+            if (i % 2 == 0) {
+                navigeyt[i].dataset.aos = "fade-right"
+            } else {
+
+                navigeyt[i].dataset.aos = "fade-left"
+            }
+        }
+        setTimeout(() => {
+            burgerMenu.style.opacity = 1
+            burgerMenu.classList.remove("activeMenu")
+        }, 300);
+
     }
 })
 let opshen = doc.querySelector("#opshen")
+let gridFil = doc.querySelectorAll('#gridFil')
+let gridbul = false
+opshen.onclick = () => {
+    if (gridbul == false) {
+        opshen.innerHTML = 'Скрыть'
+        gridbul = true
+
+        for (let i of gridFil) {
+            i.classList.add('gridFilActive')
+
+        }
+
+    } else if (gridbul == true) {
+        console.log(1111);
+        for (let i of gridFil) {
+            i.classList.remove('gridFilActive')
+        }
+        opshen.innerHTML = 'Показать <br> больше'
+        gridbul = false
+    }
+
+}
 doc.body.onscroll = () => {
     const offset = caunt.offsetHeight;
     const scrollY = window.scrollY;
@@ -533,7 +625,7 @@ doc.body.onscroll = () => {
 
     for (let i of navegeyt) {
 
-        if (i.dataset.names == "Акции" && scrollY >= yakor.offsetTop - 60) {
+        if (i.dataset.names == "Услуги" && scrollY >= yakor.offsetTop - 60) {
             navegeyt.forEach(item1 => item1.classList.remove("active"));
             i.classList.add("active");
         } else if (i.dataset.names == "Отзывы" && scrollY >= anchorComment.offsetTop - 60) {
@@ -546,13 +638,87 @@ doc.body.onscroll = () => {
 
     }
 }
-let btnShop = doc.querySelectorAll("#btnShop")
-btnShop.forEach((i)=>{
-    i.onclick=()=>{
-        for(let item of cartsArr) {
-            
+false
+
+let shopModal = doc.querySelector('.shopModal'), closes = doc.querySelector('#closes')
+axios.get("https://645d2fb3250a246ae319f640.mockapi.io/cartArr").then(res => {
+    res.data.forEach(async (i) => {
+        cartcriayt(i.name, i.tabac, i.cap, i.prise, i.id, i.ugol, i.img)
+    });
+    let btnShop = doc.querySelectorAll("#btnShop")
+    btnShop.forEach((i) => {
+        i.onclick = () => {
+            shopModal.classList.toggle('shopModalActive')
+            console.log(shopModal);
+            shopModal.classList.add("shopModalActive")
+            doc.body.style.overflow = "hidden"
+            shopModal.style.opacity = 0
+            shopModal.dataset.aos = "zoom-out-down"
+            btnPostGmail.dataset.id = i.dataset.id 
+            setTimeout(() => {
+                shopModal.style.opacity = 1
+
+            }, 300);
+            setTimeout(() => {
+
+                shopModal.dataset.aos = ""
+            }, 500);
         }
-        
-        console.log("hello",i.dataset.id);
-    }
+    })
+
 })
+closes.onclick = () => {
+
+    doc.body.style.overflow = "auto"
+    shopModal.style.opacity = 0
+    shopModal.dataset.aos = "zoom-out-up"
+    setTimeout(() => {
+        shopModal.classList.remove("shopModalActive")
+        shopModal.style.opacity = 1
+    }, 300);
+}
+
+let numberCaunt = doc.querySelector('.numberCaunt')
+let arove = doc.querySelectorAll('.arove')
+let num1 = 1
+for (let i of arove) {
+    i.onclick = () => {
+        if (i.dataset.id == '+') {
+            num1 += 1
+            if (num1 >= 6) {
+                num1 = 6
+            }
+            numberCaunt.innerHTML = num1
+        } else {
+            num1 -= 1
+            if (num1 <= 1) {
+                num1 = 1
+            }
+            numberCaunt.innerHTML = num1
+        }
+        i.dataset.number = num1
+        console.log(i.dataset.number);
+    }
+
+}
+
+
+///POST gmail//////////////////////////////////////////////
+let postShops = doc.querySelector('.postShops')
+let postShops1 = doc.querySelector('.postShops1')
+let shopsPost = doc.querySelectorAll('.shopsPost')
+let newOrder = {
+    
+}
+btnPostGmail.onclick=()=>{
+    shopsPost.forEach((i) => {
+        if (postShops.value !== '' && postShops1.value !== '' && i.checked == true) {
+            
+            newOrder.phone = postShops.value
+            newOrder.userName = postShops1.value
+            newOrder.siti = i.dataset.sity
+            newOrder.order = btnPostGmail.dataset.id
+            console.log(newOrder);
+        }
+    })
+}
