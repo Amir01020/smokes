@@ -311,6 +311,9 @@ userShop.onclick = () => {
             postObj.userName = userNameShops.value
             postObj.siti = i.dataset.sity
             console.log(postObj);
+            myModFunc('Срасибо за <br> вашь  заказ')
+        }else{
+            myModFunc('Пожалуйсто <br> заполните все поля  ')
         }
     })
 }
@@ -605,7 +608,7 @@ btnPostGmail.onclick = () => {
             }, 300);
             myModFunc('Срасибо за <br> вашь  заказ ')
         } else {
-            myModFunc('Пожалуйсто<br> заполните все поля  ')
+            myModFunc('Пожалуйсто <br> заполните все поля  ')
         }
     })
 }
