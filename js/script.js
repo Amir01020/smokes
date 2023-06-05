@@ -111,6 +111,7 @@ function cartcriayt(name, tabac, cap, prise, id, ugol, img) {
     cartcriaytdata.append(div1)
 }
 let myModFunc = (text) => {
+    myModText.innerHTML = ''
     myMod.style.display = 'flex'
     myModText.innerHTML = text
     myMod.style.opacity = 0
@@ -305,17 +306,19 @@ let userShop = doc.querySelector('#userShop')
 let btnPostGmail = doc.querySelector('.btnPostGmail')
 userShop.onclick = () => {
     sity.forEach((i) => {
-        if (userPhoneShop.value !== '' && userPhoneShop.value !== '' && i.checked == true) {
-
-            postObj.phone = userPhoneShop.value
-            postObj.userName = userNameShops.value
+        if (i.checked == true) {
             postObj.siti = i.dataset.sity
-            console.log(postObj);
-            myModFunc('Срасибо за <br> вашь  заказ')
-        }else{
-            myModFunc('Пожалуйсто <br> заполните все поля  ')
         }
+        
     })
+    if (userNameShops.value == '' || userPhoneShop.value == '') {
+        myModFunc('Пожалуйсто <br> заполните все поля')
+    } else if (userNameShops.value !== '' && userPhoneShop.value !== '') {
+        postObj.phone = userPhoneShop.value
+        postObj.userName = userNameShops.value
+        myModFunc('Срасибо за <br> вашь  заказ')
+        myModText.innerHTML = 'Срасибо за <br> вашь  заказ'
+    }
 }
 let commentModl = doc.querySelector(".commentModl")
 let comentsForm = doc.querySelector(".comentsForm")
@@ -368,7 +371,6 @@ let databas = doc.querySelector("#databas")
 dataStars.forEach((i) => {
     i.onclick = () => {
         obj.star = i.dataset.num
-        console.log(i.dataset.num);
         for (let item of dataStars) {
             if (item.dataset.num <= i.dataset.num) {
                 item.src = './icon/paginationStatus.png'
@@ -482,7 +484,6 @@ opshen.onclick = () => {
         }
 
     } else if (gridbul == true) {
-        console.log(1111);
         for (let i of gridFil) {
             i.classList.remove('gridFilActive')
         }
@@ -529,7 +530,6 @@ axios.get("https://645d2fb3250a246ae319f640.mockapi.io/cartArr").then(res => {
     btnShop.forEach((i) => {
         i.onclick = () => {
             shopModal.classList.toggle('shopModalActive')
-            console.log(shopModal);
             shopModal.classList.add("shopModalActive")
             doc.body.style.overflow = "hidden"
             shopModal.style.opacity = 0
@@ -577,7 +577,6 @@ for (let i of arove) {
             numberCaunt.innerHTML = num1
         }
         i.dataset.number = num1
-        console.log(i.dataset.number);
     }
 
 }
@@ -592,23 +591,23 @@ let newOrder = {
 }
 btnPostGmail.onclick = () => {
     shopsPost.forEach((i) => {
-        if (postShops.value !== '' && postShops1.value !== '' && i.checked == true) {
-
-            newOrder.phone = postShops.value
-            newOrder.userName = postShops1.value
+        if (i.checked == true) {
             newOrder.siti = i.dataset.sity
-            newOrder.order = btnPostGmail.dataset.id
-            console.log(newOrder);
-            doc.body.style.overflow = "auto"
-            shopModal.style.opacity = 0
-            shopModal.dataset.aos = "zoom-out-up"
-            setTimeout(() => {
-                shopModal.classList.remove("shopModalActive")
-                shopModal.style.opacity = 1
-            }, 300);
-            myModFunc('Срасибо за <br> вашь  заказ ')
-        } else {
-            myModFunc('Пожалуйсто <br> заполните все поля  ')
         }
     })
+    if (postShops.value !== '' && postShops1.value !== '') {
+        newOrder.phone = postShops.value
+        newOrder.userName = postShops1.value
+        newOrder.order = btnPostGmail.dataset.id
+        doc.body.style.overflow = "auto"
+        shopModal.style.opacity = 0
+        shopModal.dataset.aos = "zoom-out-up"
+        setTimeout(() => {
+            shopModal.classList.remove("shopModalActive")
+            shopModal.style.opacity = 1
+        }, 300);
+        myModFunc('Срасибо за <br> вашь  заказ ')
+    } else {
+        myModFunc('Пожалуйсто <br> заполните все поля  ')
+    }
 }
