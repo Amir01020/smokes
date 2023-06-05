@@ -1476,6 +1476,27 @@ footer .reclam p {
   color: #fff;
 }
 
+.mod {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 16;
+  background-color: rgba(0, 0, 0, 0.6588235294);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.mod .block {
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #74E2C7;
+}
+.mod .block h3 {
+  font-size: 30px;
+}
+
 .swiper-pagination .swiper-pagination-bullet {
   width: 21px;
   height: 20px;
@@ -1769,6 +1790,28 @@ footer .reclam p {
   }
   .scrolBox .mtbox .myadres .myElement label {
     font-size: 20px !important;
+  }
+  .commentModl {
+    align-items: start;
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+  .commentModl .box {
+    padding: 20px;
+  }
+  .commentModl .box .close {
+    top: -8px;
+    right: -8px;
+  }
+  .commentModl .box .block .elem {
+    width: 100%;
+  }
+  .commentModl .box .block .elem .star {
+    width: 100%;
+    gap: 0;
+  }
+  .commentModl .box .block .elem .star img {
+    width: 20%;
   }
 }
 @media (max-width: 430px) {

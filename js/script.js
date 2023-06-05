@@ -1,153 +1,6 @@
 let doc = document
 let heads = doc.querySelector("#heads")
 let caunt = doc.querySelector("#caunt")
-// let cartsArr = [
-//     {
-//         name: "L-набор средний premium",
-//         tabac: "Musthave , Brusko , Black Burn",
-//         cap: "1 кальян 1 чаша",
-//         prise: "900 P",
-//         ugol: "4 шт.",
-//         id: "1",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "L-набор лёгкий classic",
-//         tabac: "Spectrum , Daily hookah ,endorphin",
-//         cap: "1 кальян 1 чаша",
-//         prise: "700 P",
-//         id: "2",
-//         ugol: "4 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "L-набор крепкий classic",
-//         tabac: "Spectrum , Daily hookah ,endorphin",
-//         cap: "1 кальян 1 чаша",
-//         prise: "900 P",
-//         id: "3",
-//         ugol: "4 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "L-набор средний classic",
-//         tabac: "Северный ветер , Chabacco , Duft",
-//         cap: "1 кальян 1 чаша",
-//         prise: "800 P",
-//         id: "4",
-//         ugol: "4 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "L-набор лёгкий premium",
-//         tabac: "Spectrum, Daily hookah , endorphin",
-//         cap: "1 кальян 1 чаша",
-//         prise: "800 P",
-//         id: "5",
-//         ugol: "4 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "L-набор крепкий premium",
-//         tabac: "Black Burn, Darkside , Bonche",
-//         cap: "1 кальян 1 чаша",
-//         prise: "1 000 P",
-//         id: "6",
-//         ugol: "4 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XL-набор средний premium",
-//         tabac: "Musthave , Brusko , Black Burn",
-//         cap: "1 кальян 2 чаша",
-//         prise: "1 300 P",
-//         ugol: "8 шт.",
-//         id: "7",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XL-набор лёгкий classic",
-//         tabac: "Spectrum , Daily hookah ,endorphin",
-//         cap: "1 кальян 2 чаша",
-//         prise: "1 000 P",
-//         id: "8",
-//         ugol: "8 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XL-набор крепкий classic",
-//         tabac: "Spectrum , Daily hookah ,endorphin",
-//         cap: "1 кальян 2 чаша",
-//         prise: "1 300 P",
-//         id: "9",
-//         ugol: "8 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XL-набор средний classic",
-//         tabac: "Северный ветер , Chabacco , Duft",
-//         cap: "1 кальян 2 чаша",
-//         prise: "1 200 P",
-//         id: "10",
-//         ugol: "8 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XL-набор лёгкий premium",
-//         tabac: "Spectrum, Daily hookah , endorphin",
-//         cap: "1 кальян 2 чаша",
-//         prise: "1 100 P",
-//         id: "11",
-//         ugol: "8 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XL-набор крепкий premium",
-//         tabac: "Black Burn, Darkside , Bonche",
-//         cap: "1 кальян 2 чаша",
-//         prise: "1 400 P",
-//         id: "12",
-//         ugol: "8 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XXL-набор средний premium",
-//         tabac: "Musthave , Brusko , Black Burn",
-//         cap: "2 кальян 4 чаша",
-//         prise: "1 600 P",
-//         ugol: "16 шт.",
-//         id: "1",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XXL-набор лёгкий classic",
-//         tabac: "Spectrum , Daily hookah ,endorphin",
-//         cap: "2 кальян 3 чаша",
-//         prise: "1 200 P",
-//         id: "2",
-//         ugol: "12 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XXL-набор крепкий classic",
-//         tabac: "Spectrum , Daily hookah ,endorphin",
-//         cap: "2 кальян 3 чаша",
-//         prise: "1 600 P",
-//         id: "3",
-//         ugol: "12 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XXL-набор средний classic",
-//         tabac: "Северный ветер , Chabacco , Duft",
-//         cap: "2 кальян 3 чаша",
-//         prise: "1 500 P",
-//         id: "4",
-//         ugol: "12 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XXL-набор лёгкий premium",
-//         tabac: "Spectrum, Daily hookah , endorphin",
-//         cap: "2 кальян 4 чаша",
-//         prise: "1 300 P",
-//         id: "4",
-//         ugol: "16 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     }, {
-//         name: "XXL-набор крепкий premium",
-//         tabac: "Black Burn, Darkside , Bonche",
-//         cap: "2 кальян 4 чаша",
-//         prise: "1 800 P",
-//         id: "4",
-//         ugol: "16 шт.",
-//         img: "./icon/Rectangle 17.png",
-//     },
-// ]
 let arrTabac = [
     {
         "arr": ["Spectrum", "Daily hookah", "endorphin", "Fumari", "Element"],
@@ -161,6 +14,8 @@ let arrTabac = [
     },
 
 ]
+let myMod = doc.querySelector('#myMod')
+let myModText = doc.querySelector('#myModText')
 let cartcriaytdata = doc.querySelector("#cartcriaytdata")
 function cartcriayt(name, tabac, cap, prise, id, ugol, img) {
     const div1 = document.createElement("div");
@@ -255,7 +110,20 @@ function cartcriayt(name, tabac, cap, prise, id, ugol, img) {
     div1.appendChild(div2);
     cartcriaytdata.append(div1)
 }
-
+let myModFunc = (text) => {
+    myMod.style.display = 'flex'
+    myModText.innerHTML = text
+    myMod.style.opacity = 0
+    setTimeout(() => {
+        myMod.style.opacity = 1
+    }, 500);
+    setTimeout(() => {
+        myMod.style.opacity = 0
+        setTimeout(() => {
+            myMod.style.display = 'none'
+        }, 500);
+    }, 2000);
+}
 
 let oupenScroll = doc.querySelector(".oupenScroll")
 let comentBoxdata = doc.querySelector(".comentBoxdata")
@@ -438,7 +306,7 @@ let btnPostGmail = doc.querySelector('.btnPostGmail')
 userShop.onclick = () => {
     sity.forEach((i) => {
         if (userPhoneShop.value !== '' && userPhoneShop.value !== '' && i.checked == true) {
-            
+
             postObj.phone = userPhoneShop.value
             postObj.userName = userNameShops.value
             postObj.siti = i.dataset.sity
@@ -497,7 +365,14 @@ let databas = doc.querySelector("#databas")
 dataStars.forEach((i) => {
     i.onclick = () => {
         obj.star = i.dataset.num
-
+        console.log(i.dataset.num);
+        for (let item of dataStars) {
+            if (item.dataset.num <= i.dataset.num) {
+                item.src = './icon/paginationStatus.png'
+            } else {
+                item.src = './icon/paginationStatusActive.png'
+            }
+        }
     }
 })
 function postdata(obj) {
@@ -656,7 +531,7 @@ axios.get("https://645d2fb3250a246ae319f640.mockapi.io/cartArr").then(res => {
             doc.body.style.overflow = "hidden"
             shopModal.style.opacity = 0
             shopModal.dataset.aos = "zoom-out-down"
-            btnPostGmail.dataset.id = i.dataset.id 
+            btnPostGmail.dataset.id = i.dataset.id
             setTimeout(() => {
                 shopModal.style.opacity = 1
 
@@ -710,17 +585,27 @@ let postShops = doc.querySelector('.postShops')
 let postShops1 = doc.querySelector('.postShops1')
 let shopsPost = doc.querySelectorAll('.shopsPost')
 let newOrder = {
-    
+
 }
-btnPostGmail.onclick=()=>{
+btnPostGmail.onclick = () => {
     shopsPost.forEach((i) => {
         if (postShops.value !== '' && postShops1.value !== '' && i.checked == true) {
-            
+
             newOrder.phone = postShops.value
             newOrder.userName = postShops1.value
             newOrder.siti = i.dataset.sity
             newOrder.order = btnPostGmail.dataset.id
             console.log(newOrder);
+            doc.body.style.overflow = "auto"
+            shopModal.style.opacity = 0
+            shopModal.dataset.aos = "zoom-out-up"
+            setTimeout(() => {
+                shopModal.classList.remove("shopModalActive")
+                shopModal.style.opacity = 1
+            }, 300);
+            myModFunc('Срасибо за <br> вашь  заказ ')
+        } else {
+            myModFunc('Пожалуйсто<br> заполните все поля  ')
         }
     })
 }
