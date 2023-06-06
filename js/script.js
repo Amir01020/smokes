@@ -309,7 +309,7 @@ userShop.onclick = () => {
         if (i.checked == true) {
             postObj.siti = i.dataset.sity
         }
-        
+
     })
     if (userNameShops.value == '' || userPhoneShop.value == '') {
         myModFunc('Пожалуйсто <br> заполните все поля')
@@ -317,7 +317,7 @@ userShop.onclick = () => {
         postObj.phone = userPhoneShop.value
         postObj.userName = userNameShops.value
         myModFunc('Срасибо за <br> вашь  заказ')
-        myModText.innerHTML = 'Срасибо за <br> вашь  заказ'
+        
     }
 }
 let commentModl = doc.querySelector(".commentModl")
