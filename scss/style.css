@@ -1869,4 +1869,8 @@ footer .reclam p {
     grid-template-columns: 1fr !important;
     grid-template-rows: 250px 250px !important;
   }
+}
+a:visited {
+  color: #fff;
+  opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */
