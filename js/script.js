@@ -611,3 +611,7 @@ btnPostGmail.onclick = () => {
         myModFunc('Пожалуйсто <br> заполните все поля  ')
     }
 }
+let imgs = doc.querySelectorAll('img')
+for(let i of imgs){
+    i.draggable = false
+}
